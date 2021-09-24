@@ -1015,14 +1015,28 @@ input[type=checkbox]:checked + .checkbox01::after {
 
 
 @media print {
+  
   body {
+    background: #fff;
     -webkit-print-color-adjust: exact;
   }
-
   .aos-init {
     opacity: 1 !important;
     transform: none !important;
   }
+
+  .parallax-slider{
+    padding: 10px;
+  }
+
+/*   main{
+    background-image: url("../images/header-bg.jpg");
+    background-repeat: no-repeat;
+  } */
+
+/*   .parallax-slider{
+    display: none;
+  } */
 
   .nav-container{
     display: grid;
@@ -1033,6 +1047,10 @@ input[type=checkbox]:checked + .checkbox01::after {
   .navbar-nav{
     display: grid;
     grid-template-columns: 1fr  1fr  1fr  1fr;  
+  }
+  .navbar-nav .nav-item{
+    width: 130px;
+    justify-content: center;
   }
   a:not(.btn) {
     text-decoration: none!important;

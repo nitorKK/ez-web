@@ -725,6 +725,7 @@ th {
 }
 
 .relative {
+  background-repeat: no-repeat;
   position: relative;
 }
 
@@ -4558,9 +4559,3 @@ figure:hover img {
   }
 }
 
-@media print {
-  .aos-init {
-    opacity: 1 !important;
-    transform: none !important;
-  }
-}

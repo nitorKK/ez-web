@@ -1013,3 +1013,35 @@ input[type=checkbox]:checked + .checkbox01::after {
   margin-bottom: 40px;
 }
 
+
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+  }
+
+  .aos-init {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .nav-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-content: space-between;
+  } 
+  .navbar-nav{
+    display: grid;
+    grid-template-columns: 1fr  1fr  1fr  1fr;  
+  }
+  a:not(.btn) {
+    text-decoration: none!important;
+}
+.service-link-img{
+  background-repeat: no-repeat;
+}
+
+.parallax-mirror {
+position: static;
+}
+}

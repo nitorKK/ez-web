@@ -7,19 +7,32 @@ $(document).ready(function () {
     header_height_static = $(".site-header.static").outerHeight(),
     fitscreen = window_height - header_height;
 
+    $("form input[type!=image][type!=button][type!=submit][type!=reset],form select").keypress(function (e) {
+      if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+        return false;
+      } else {
+        return true;
+      }
+    });
 
   // $(".fullscreen").css("height", window_height)
   // $(".fitscreen").css("height", fitscreen);
 
   //-------- Active Sticky Js ----------//
-  $(".default-header").sticky({
+  /* $(".default-header").sticky({
     topSpacing: 0
-  });
+  }); */
 
 
-  if (document.getElementById("default-select")) {
+/*   if (document.getElementById("default-select")) {
     $('select').niceSelect();
-  };
+  };  */
+
+/*   $(function() {
+    var height=$("#js-default-header").height();
+    $("body").css("margin-top", height +0);//10pxだけ余裕をもたせる
+});
+   */
 
   /*----------------------------------------------------*/
   /*  Magnific Pop up js (Home Video)

@@ -1,0 +1,69 @@
+
+<% let text = "すべて" 
+   let number = "1件" 
+   let textsc = "ダム" 
+   let textnone = "コンクリート殻・アスファルト殻"
+   let numbernone = "675件" 
+%>
+  <ul class="p-accordion-area">
+  <% let ary = ['土木工事（施設別）', '土木工事（共通）', '土木工事（仮設）', '調査・測量・設計', '機械設備', '電気通信設備', '建築', '施設の機能診断', 'コンクリート補修工法', 'コンクリート補強工法']; %>
+  <% ary.forEach(function (value, key) { %>
+<li>
+    <div class="p-field-title plus">
+        <%= value %>
+    </div>
+    <div class="p-panel field-contents">
+        <div class="row">
+            <div class="col-12">
+                <div class="c-card card-m">
+                    <div class="c-card__body">
+                        <ul class="list">
+                            <a href="#">
+                                <li>
+                                    <%- text %>
+                                </li>
+                                <li>
+                                    <%- number %>
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="c-card card-m">
+                    <div class="c-card__body">
+                        <ul class="list">
+                            <a href="#">
+                                <li>
+                                    <%- text %>
+                                </li>
+                                <li>
+                                    <%- number %>
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="c-card card-m">
+                    <div class="c-card__body">
+                        <ul class="list">
+                            <a href="#" class="no-search disabled">
+                                <li>
+                                    <%- textnone %>
+                                </li>
+                                <li>
+                                    <%- numbernone %>
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+<% }); %>
+</ul>

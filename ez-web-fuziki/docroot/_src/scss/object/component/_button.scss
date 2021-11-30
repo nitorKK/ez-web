@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+button:focus {
+  outline: none;
+}
+
+.input-group {
+  @include mq("md") {
+    /*     z-index: 1; */
+    /*     width: 70%; */
+  }
+}
+
+.input-search-btn {
+  display: flex;
+  padding: 0 .5rem;
+  background: var(--color-primary);
+  border-top-right-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+}
+
+.input-search-btn > .btn {
+  @include font-size(14);
+  font-weight: bold;
+  line-height: 1;
+  color: $color-white;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+}
+
+
+/* ボタン系 */
+
+.c-button{
+  position: relative;
+  max-width: 1000px;
+}
+
+.genric-btn {
+  /*   @include font-size(14); */
+  color: $color-white;
+  background-color: var(--color-primary);
+  border: 1px solid $color-white;
+}
+
+.genric-btn:hover {
+  /*   color: var(--color-primary);
+  background: $color-white;
+  border: 1px solid  var(--color-primary); */
+}
+
+.btn-default {
+  padding: 1rem 1rem;
+  border-radius: .5rem;
+}
+
+.c-btn-default-mypage{
+  width: 100%;
+  padding: .8rem 1.8rem;
+  border-radius: .5rem;
+  @include font-size(14);
+}
+
+
+.c-btn-mini-primary {
+  width: 100%;
+  max-width: 80px;
+  padding: .8rem 0;
+  border-radius: .5rem;
+  @include font-size(14);  
+}
+
+.c-btn-mini-secondary {
+  width: 100%;
+  max-width: 80px;
+  padding: .8rem 0;
+  color: var(--color-primary);
+  background: $color-white;
+  border: solid 1px var(--color-primary);
+  border-radius: .5rem;
+  @include font-size(12);
+}
+
+.genric-btn.default {
+  color: $color-white;
+}
+
+.genric-btn.default:hover {
+  background: $color-white;
+}
+
+.c-genric-btn {
+  position: relative;
+  width: 320px;
+  margin: auto;
+  text-align: center;
+
+  &__text {
+    width: 320px;
+    padding: 1rem 1.2rem 1rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    text-align: left;
+    text-align: center;
+    border-radius: .5rem;
+    transition: all .3s $easeOutSine;
+
+    &:hover {
+      background-color: var(--color-secondary);
+      transition: all $easeOutSine .3s;
+    }
+  }
+
+  .btn-ph-caret-left {
+    position: absolute;
+    top: calc(50% - .5em);
+    left: 1rem;
+  }
+
+  .hover {
+    display: none;
+  }
+
+  .nomal{
+    text-align: left;
+  }
+
+  &:hover .nomal {
+    display: none;
+  }
+
+  &:hover .hover {
+    display: inline;
+  }
+}
+
+
+//admin
+
+.c-add-btn{
+  @include mq("admin-breakpoint-m") {
+    width: 100%;
+  }
+  max-width: 905px;
+  margin: 0 8rem  auto;
+}

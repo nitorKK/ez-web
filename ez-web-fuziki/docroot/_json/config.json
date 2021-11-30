@@ -1,0 +1,45 @@
+{
+  "default": {
+    "title": "タイトル",
+    "description": "",
+    "category": "default",
+    "target": "user",
+    "header": "",
+    "footer": "",
+    "sidebar": "",
+    "parent": "",
+    "note": ""
+  },
+  "top": {
+    "title": "TOP",
+    "category": "top",
+    "target": "user",
+    "header": "user-header",
+    "footer": "user-footer",
+    "parent": "none"
+  },
+  "service": {
+    "title": "service",
+    "category": "top",
+    "target": "user",
+    "header": "user-header",
+    "footer": "user-footer",
+    "parent": "none"
+  },
+  "property": {
+    "title": "property",
+    "category": "top",
+    "target": "user",
+    "header": "user-header",
+    "footer": "user-footer",
+    "parent": "none"
+  },
+  "company": {
+    "title": "TOP",
+    "category": "top",
+    "target": "user",
+    "header": "user-header",
+    "footer": "user-footer",
+    "parent": "none"
+  }
+}

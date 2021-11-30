@@ -1,0 +1,121 @@
+.col-3,
+.col-1,
+.col-2,
+.col-9,
+.col-10,
+.col-11 {
+  transition: all .3s $easeOutSine;
+}
+
+.field-search-wrapper {
+
+  .col-1 {
+    flex: 0 0 4.5%;
+  }
+}
+
+.p-sidebar {
+  position: relative;
+  width: 200px;
+  min-height: 620px;
+  background: var(--color-secondary);
+
+  .p-field-title {
+    @include font-size(14);
+  }
+}
+
+.c-sidebar-button {
+  position: absolute;
+  top: 2rem;
+  right: -1.3rem;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  max-width: 35px;
+  height: 35px;
+  padding: 8px;
+  color: $color-white;
+  text-align: center;
+  background: var(--color-quaternary);
+
+  &:hover {
+    color: $color-white;
+    opacity: .8;
+  }
+
+  .ph-caret-left {
+    color: var(--color-primary);
+  }
+}
+
+.p-scrollbar {
+  transition: all .3s $easeOutSine;
+}
+
+.c-scroll-button {
+  position: fixed;
+  right: 5px;
+  bottom: 9rem;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  max-width: 80px;
+  height: 80px;
+  padding: 3px 17px 0 17px;
+  color: $color-white;
+  text-align: center;
+  background: var(--color-primary);
+  opacity: .8;
+  transition: all .3s $easeOutSine;
+
+  &:hover {
+    color: $color-white;
+    opacity: .8;
+  }
+}
+
+.c-scroll-button i {
+  width: 8px;
+  transition: transform 120ms ease-out;
+}
+
+.c-scroll-button.reflect i {
+  transform: scale(-1, 1);
+}
+
+.buttonright {
+  top: 29rem;
+  right: -7rem;
+}
+
+.p-sidebar-body {
+  display: block;
+}
+
+.p-sidebar.js-side--close {
+  width: 35px;
+}
+
+.js-search--close {
+  display: none;
+}
+
+.ph-caret-right::before {
+  @include font-size(20);
+  font-weight: bold !important;
+}
+
+.p-sidebar-body {
+  @include mq("xsm") {
+    padding: 0;
+  }
+  @include mq("sm") {
+    padding: 0 0 15px;
+  }
+}
+/* 
+.c-sidebar-button {
+  display: none;
+}
+ */

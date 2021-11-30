@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/* ================================================================================
+FileName: _common.scss
+================================================================================ */
+
+body.is-fixed {
+  position: fixed;
+  left: 0;
+  width: 100%;
+}
+
+.js-overlay {
+  display: none;
+}
+
+.js-slide-menu {
+
+  &__target { // メニュー部分
+    transform: translateX(100%);
+    @include mq(){
+      transition: transform .3s cubic-bezier(.22, .61, .36, 1);
+    }
+
+    &.is-show {
+      transform: translateX(0);
+    }
+  }
+
+  // ボタン
+
+  &__trigger {
+
+    .js-slide-menu__icon{
+      transition: background-color .3s ease;
+
+      &::before,
+      &::after {
+        transition: .3s ease;
+      }
+    }
+
+    &.is-show{
+      color: rgba($colorTextPrimary, 0);
+
+      .js-slide-menu__icon {
+        background-color: rgba(255, 255, 255, 0);
+
+        &::before {
+          top: 50%;
+          background-color: $colorVeryLightBrown;
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          top: 50%;
+          background-color: $colorVeryLightBrown;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+
+.js-modal-logout__target {
+  opacity: 0;
+
+  &.is-show {
+    display: block;
+  }
+}
+
+// アコーディオン ------------------
+
+.js-accordion {
+
+  .js-accordion-trigger.is-open {
+
+    &::before {
+      transform: rotate(90deg);
+    }
+  }
+
+  .js-accordion-target {
+    display: none;
+  }
+}

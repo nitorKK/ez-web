@@ -1,0 +1,615 @@
+@include mq("sp") {
+
+  .l-company-body {
+    grid-template-columns: 78px 200px;
+    /*     background-position: -72px 0;
+    background-size: cover; */
+    background-repeat: no-repeat;
+    background-position: 130px 6px;
+    background-size: cover;
+
+    .company-text {
+      @include font-size(1);
+    }
+  }
+}
+
+.l-header-wrapper {
+  @include svg-header-sp--color2("3d7cb2");
+  background-repeat: repeat-x;
+  background-size: contain;
+  @include mq("lg") {
+    background-image: none;
+  }
+}
+
+.l-header-mypege-wrapper {
+  @include svg-header-sp--color2("d8e5f0");
+}
+
+@include mq("xsm") {
+
+  .l-company-body {
+    @include svg-header-sp--color("3d7cb2");
+    /*     border-top: solid 8px var(--color-primary); */
+    display: grid;
+    grid-template-columns: 110px 200px;
+    align-items: center;
+    padding-top: 1.5rem;
+    padding-right: 15px;
+    padding-left: 15px;
+    background-repeat: no-repeat;
+    background-position: 49.88888vw 6px;
+    background-size: cover;
+    /*     background: url("../img/header-background-sp.svg") no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%; */
+  }
+
+  .l-header-area.header-sticky .nav .scroll-to-section.search-icon a {
+    width: 100%;
+  }
+
+  .l-header-area {
+    position: relative;
+    padding-top: 0;
+    border-bottom: solid 1px var(--color-quaternary);
+
+    > .container {
+      max-width: initial;
+      max-width: 1000px;
+      margin: auto;
+    }
+  }
+
+  .l-header-area .menu-trigger {
+    display: block !important;
+  }
+
+  .l-header-area .main-nav {
+    overflow: hidden;
+    background: none;
+  }
+
+  .l-header-area .main-nav .nav {
+    position: absolute;
+    display: none;
+    float: none;
+    width: 100%;
+    padding: 0 $m-small;
+    margin-left: 0px;
+    background: $color-white;
+    transition: all 0s ease 0s;
+    transition: all 0s ease 0s;
+    transition: all 0s ease 0s;
+    transition: all 0s ease 0s;
+    @include mq("lg") {
+      position: static;
+      background: none;
+    }
+  }
+
+  .l-header-area .main-nav .nav .scroll-to-section.submenu ul.js-menu-active {
+    height: auto !important;
+  }
+}
+
+@include mq("sm") {
+
+  .l-company-body {
+    background-position: 56.88888vw 6px;
+  }
+}
+
+.l-header-area {
+  @include mq("lg") {
+    @include svg-header-pc--color("3d7cb2");
+    background-repeat: no-repeat;
+    background-position: 0 -.5rem;
+    background-size: 100%;
+  }
+}
+
+
+/* .l-header-mypage-area{
+  position: relative;
+  padding-top: 0;
+  border-bottom: solid 1px var(--color-quaternary);
+
+  > .container {
+    max-width: initial;
+    max-width: 1200px;
+    @include mq("lg") {
+      max-width: 1600px;
+    }
+    margin: auto;
+  }
+} */
+
+.l-header-mypage-area {
+  @include mq("lg") {
+    @include svg-header-pc--color("d8e5f0");
+  }
+}
+
+.has-header-background {
+  fill: #3d7cb2;
+}
+
+.l-company-body {
+  @include mq("md") {
+    grid-template-columns: 180px 1fr;
+    align-items: center;
+    background-position: 61.88888vw 6px;
+    /*  background: url("../img/header-background-sp.svg") no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%; */
+  }
+  @include mq("lg") {
+    display: block;
+    padding-top: 3rem;
+    padding-right: 0;
+    padding-left: 0;
+    background: none;
+    background-position: 0 -2.2rem;
+    background-size: cover;
+  }
+}
+
+.l-company-mypage-body {
+  @include mq("xsm") {
+    @include svg-header-sp--color("d8e5f0");
+  }
+  @include mq("sm") {
+    @include svg-header-sp--color("d8e5f0");
+  }
+  @include mq("md") {
+    grid-template-columns: 210px 200px;
+  }
+  @include mq("lg") {
+    padding-top: 2.5rem;
+  }
+  padding-top: 1rem;
+
+  @include svg-header-sp--color2("d8e5f0");
+}
+
+/* svg {
+  width: 100px;
+  @include mq("sp") {
+    width: 70px;
+  }
+  @include mq("md") {
+    width: 150px;
+  }
+  @include mq("lg") {
+    width: 165px;
+}
+ */
+
+.logo {
+  fill: #3d7cb2;
+}
+
+.l-col-p-none {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.nav .scroll-to-section a.js-menu-active {
+  position: relative;
+}
+
+.l-header-area .main-nav {
+  min-height: 65px;//80px
+  background: transparent;
+}
+
+.l-header-area .main-nav .logo h1 {
+  @include font-size(20);
+  font-weight: 800;
+  /*   line-height: 100px; */
+  text-transform: capitalize;
+  transition: all .3s ease 0s;
+  transition: all .3s ease 0s;
+  transition: all .3s ease 0s;
+  transition: all .3s ease 0s;
+}
+
+.l-header-area .main-nav .logo h1 img {
+  max-width: 30px;
+  margin-top: -20px;
+  margin-left: 5px;
+}
+
+.main-nav .logo h1 {
+  line-height: 70px;
+}
+
+.main-nav .nav {
+  margin-top: 10px !important;
+  @include mq("md") {
+    margin-top: 0;
+  }
+}
+
+.l-header-area .main-nav .nav {
+  position: relative;
+  z-index: 999;
+  float: right;
+  margin-top: 30px;
+  margin-right: 0px;
+  background-color: transparent;
+  transition: all .3s ease 0s;
+  transition: all .3s ease 0s;
+  transition: all .3s ease 0s;
+  transition: all .3s ease 0s;
+}
+
+.l-header-area .main-nav .nav .scroll-to-section {
+  padding-left: initial;
+  @include mq("md") {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+@include mq("lg") {
+
+  .nav {
+    display: inline !important;
+  }
+}
+
+.nav .scroll-to-section {
+  display: block;
+  width: 100%;
+
+  max-width: 300px;
+  margin: auto;
+  font-weight: bold;
+  text-align: left;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  border: transparent;
+  transition: all .3s ease 0s;
+  transition: all .3s ease 0s;
+  transition: all .3s ease 0s;
+  transition: all .3s ease 0s;
+  @include font-size(20);
+  @include mq("md") {
+    text-align: center;
+    @include font-size(16);
+  }
+}
+
+.main-nav {
+  @include mq("lg") {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    align-items: center;
+    /*     grid-template-columns: 350px 1fr; */
+  }
+}
+
+.nav > a {
+  position: relative;
+  display: block;
+  @include mq("lg") {
+    display: inline;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top: none;
+    border-bottom: none;
+    border-bottom: 4px solid rgba(0, 0, 0, 0);
+
+    &::before {
+      position: absolute;
+      top: -.2rem;
+      left: 0;
+      display: inline-block;
+      width: 3px;
+      height: 40px;
+      content: "";
+      border-left: 1px dashed var(--color-primary);
+    }
+  }
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: var(--text-black);
+  border-top: 1px dashed var(--color-primary);
+}
+
+.nav,
+.l-id {
+  @include mq("lg") {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.l-id {
+  display: flex;
+  justify-content: space-around;
+  @include mq("lg") {
+    align-items: end;
+    padding-bottom: 1rem;
+
+    li:nth-child( 3 ) {
+      text-align: left;
+    }
+  }
+}
+
+.nav > a:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.nav > a:last-child {
+  position: relative;
+  @include mq("lg") {
+
+    &::after {
+      position: absolute;
+      top: -.2rem;
+      right: 0;
+      display: inline-block;
+      width: 3px;
+      height: 40px;
+      content: "";
+      border-right: 1px dashed var(--color-primary);
+    }
+  }
+}
+
+.nav > a:hover {
+  @include mq("lg") {
+    color: var(--text-black);
+    border-bottom: 4px solid var(--color-tertiary);
+    opacity: 1 !important;
+  }
+}
+
+.nav > .js-nav--active {
+  @include mq("lg") {
+    display: block;
+    border-bottom: 4px solid var(--color-primary);
+  }
+}
+
+.company-sub-text {
+  @include font-size(16);
+  display: grid;
+  grid-template-columns: 300px 2fr;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+  @include mq("md") {
+    display: block;
+    padding: 3px 0;
+    text-align: center;
+    @include font-size(12);
+  }
+}
+
+.company-sub-text > .ph-caret-right {
+  position: absolute;
+  right: 2.5rem;
+  bottom: 3rem;
+  color: var(--color-primary);
+  @include mq("md") {
+    display: none;
+  }
+}
+
+.l-header-area .main-nav .nav .scroll-to-section a:hover::after {
+  color: var(--text-black);
+}
+
+.l-header-area .main-nav .menu-trigger {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 99;
+  display: block;
+  display: none;
+  width: 32px;
+  height: 40px;
+  text-indent: -9999em;
+  cursor: pointer;
+  @include mq("lg") {
+    display: none !important;
+  }
+}
+
+.main-nav .menu-trigger {
+  top: 23px;
+}
+
+.l-header-area .main-nav .menu-trigger span,
+.l-header-area .main-nav .menu-trigger span::before,
+.l-header-area .main-nav .menu-trigger span::after {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 30px;
+  height: 2.5px;
+  background-color: $color-white;
+  transition: all .4s;
+  transition: all .4s;
+  transition: all .4s;
+  transition: all .4s;
+}
+
+.main-nav .menu-trigger span,
+.main-nav .menu-trigger span::before,
+.main-nav .menu-trigger span::after {
+  background-color: var(--color-primary);
+}
+
+.l-header-area .main-nav .menu-trigger span::before,
+.l-header-area .main-nav .menu-trigger span::after {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 30px;
+  width: 100%;
+  height: 2px;
+  background-color: $color-white;
+  transition: all .4s;
+  transition: all .4s;
+  transition: all .4s;
+  transition: all .4s;
+}
+
+.main-nav .menu-trigger span::before,
+.main-nav .menu-trigger span::after {
+  background-color: var(--color-primary);
+}
+
+.l-header-area .main-nav .menu-trigger span::before,
+.l-header-area .main-nav .menu-trigger span::after {
+  content: "";
+}
+
+.l-header-area .main-nav .menu-trigger span {
+  top: 16px;
+}
+
+.l-header-area .main-nav .menu-trigger span::before {
+  top: -10px;
+  z-index: 10;
+  transform-origin: 33% 100%;
+  transform-origin: 33% 100%;
+  transform-origin: 33% 100%;
+  transform-origin: 33% 100%;
+}
+
+.l-header-area .main-nav .menu-trigger span::after {
+  top: 10px;
+  transform-origin: 33% 0;
+  transform-origin: 33% 0;
+  transform-origin: 33% 0;
+  transform-origin: 33% 0;
+}
+
+.l-header-area .main-nav .menu-trigger.js-menu-active span,
+.l-header-area .main-nav .menu-trigger.js-menu-active span::before,
+.l-header-area .main-nav .menu-trigger.js-menu-active span::after {
+  width: 100%;
+  background-color: transparent;
+}
+
+.l-header-area .main-nav .menu-trigger.js-menu-active span::before {
+  background-color: $color-white;
+  transform: translateY(6px) translateX(1px) rotate(45deg);
+  transform: translateY(6px) translateX(1px) rotate(45deg);
+  transform: translateY(6px) translateX(1px) rotate(45deg);
+  transform: translateY(6px) translateX(1px) rotate(45deg);
+}
+
+.main-nav .menu-trigger.js-menu-active span::before {
+  background-color: var(--color-primary);
+}
+
+.l-header-area .main-nav .menu-trigger.js-menu-active span::after {
+  background-color: $color-white;
+  transform: translateY(-6px) translateX(1px) rotate(-45deg);
+  transform: translateY(-6px) translateX(1px) rotate(-45deg);
+  transform: translateY(-6px) translateX(1px) rotate(-45deg);
+  transform: translateY(-6px) translateX(1px) rotate(-45deg);
+}
+
+.main-nav .menu-trigger.js-menu-active span::after {
+  background-color: var(--color-primary);
+}
+
+.l-header-area.header-sticky {
+  min-height: 80px;
+}
+
+.l-header-area .nav {
+  margin-top: 30px;
+}
+
+@include mq("lg") {
+
+  .l-header-area .main-nav .nav {
+    display: flex;
+    padding: 0 0;
+    padding-top: 6rem;
+    padding-bottom: .5rem;
+
+  }
+}
+
+.navbar-brand {
+  display: block;
+  @include font-size(18);
+
+  @include mq("md") {
+    @include font-size(25);
+  }
+}
+
+.company-text {
+  color: var(--color-primary);
+  @include font-size(10);
+  @include mq("md") {
+    @include font-size(14);
+    font-weight: bold;
+  }
+  @include mq("lg") {
+    padding-top: 1rem;
+  }
+}
+
+.company-text-mypage {
+  color: var(--color-primary);
+  @include font-size(10);
+  @include mq("md") {
+    @include font-size(12);
+    font-weight: bold;
+  }
+  @include mq("lg") {
+    @include font-size(14);
+  }
+}
+
+.nav-pc-none {
+  display: inline-block;
+  padding: .3rem 2rem;
+  margin: .1rem 0 0;
+  font-weight: bold;
+  color: $color-white;
+  background-color: var(--color-primary);
+}
+
+.navbar-brand {
+  display: block;
+  @include font-size(18);
+  @include mq("md") {
+    @include font-size(25);
+  }
+}
+
+.has-header-background-sp {
+  fill: #fff;
+  stroke: #707070;
+}
+
+.header-background-color {
+  fill: #3d7cb2;
+}
+
+.nav-pc-none {
+  padding: .3rem 2rem;
+  font-weight: bold;
+  color: $color-white;
+  background-color: var(--color-primary);
+  @include font-size(10);
+}

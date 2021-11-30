@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.gallery {
+  margin: 0 0 5px 0;
+}
+
+.gallery li {
+  list-style: none;
+}
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 42%;
+  z-index: 3;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  border-top: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+  outline: none;
+}
+
+.slick-prev {
+  left: 2.5%;
+  transform: rotate(-135deg);
+}
+
+.slick-next {
+  right: 2.5%;
+  transform: rotate(45deg);
+}
+
+.choice-btn li {
+  list-style: none;
+  cursor: pointer;
+  background: #333;
+  outline: none;
+}
+
+.choice-btn li img {
+  opacity: .4;
+}
+
+.choice-btn li.slick-current img {
+  opacity: 1;
+}
+
+//ec
+
+.ec-slider-wrap {
+  display: flex;
+  height: 280px;
+  overflow: hidden;
+  @include mq("xsm") {
+    height: 150px;
+  }
+  @include mq("md") {
+    height: 250px;
+  }
+}
+
+.ec-slider-wrap .ec-slider-for {
+  width: 75%;
+}
+
+.ec-slider-wrap .ec-slider-nav {
+  width: 25%;
+}
+
+.ec-slider-nav.slick-vertical .slick-slide {
+  margin-top: -50px;
+  margin-bottom: 50px;
+  border: none;
+}
+
+.hidden{
+  display: none;
+}
+
+.draggable{
+  position: relative;
+}
+
+.danger-img::after {
+  position: absolute;
+  top: 6rem;
+  left: 1rem;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-image: url(/images/danger.png);
+  background-repeat: no-repeat;
+  background-size: 23%;
+}

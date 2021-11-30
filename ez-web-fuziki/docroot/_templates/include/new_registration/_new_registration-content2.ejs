@@ -1,0 +1,259 @@
+<form method="post" action="/">
+<div class="c-error-message mt-small mb-medium">入力内容に誤りがあります。修正箇所をご確認ください。</div>
+<div class="c-subtitle has-background-secondary mt-small mb-small">
+        <span class="c-subtitle u-has-inline-block">採用実績</span>
+    </div>
+
+    <div class="p-new-registration__wrapper">
+        <div class="form-group grid-layout--274-634 u-border-bottom-dashed-none">
+            <div class="p-new-registration__iteme--2">
+            <label class="col-274 col-form-label">農業農村整備事業</label>
+            <span class="c-check u-has-display- m-small-right">必須</span>
+            <div class="col-634 p-number">
+                <input type="text" class="p-input-width c-form-control-error form-control u-has-inline-block" placeholder="" name="農業農村整備事業" value=""><span class="u-has-inline-block m-small-left-custom">件</span>
+                <div class="c-error-text">※必須項目のため入力してください。</div>
+            </div> 
+        </div>
+    </div>
+<div class="c-add-table">
+        <div class="form-step-table-theme--1">
+            <div class="c-lead mt-small pb-small"> 参考実績を年度の新しいものから順に入力ください（最大20件） </div>
+            <table class="form-table-theme--1">
+                <thead class="has-background-thead">
+                    <tr class="thead-form-table">
+                        <th>発注者</th>
+                        <th>施工年度</th>
+                        <th>施工場所<br>（都道府県名）</th>
+                        <th>件名</th>
+                        <th>報文の<br>有無</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                <% for (var i = 0; i < 3; i++) { %>
+                    <tr>
+                        <td>
+                            <div class="col-12 u-col-p-none">
+                                <input type="text" class="c-form-control-error form-control" placeholder="例）株式会社◯◯◯◯◯◯" name="text1" value="">
+                                <div class="c-error-text">※入力に誤りがあります。</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col-12 u-construction u-col-p-none">
+                                <input type="text" class="form-control" placeholder="2021" name="text1" value=""><span>年度</span>
+                            </div>
+                        </td>
+                        <td>
+                                <div class="table-select--icon"><select class="c-form-control-error form-control is-empty table-select" name="select1">
+                                        <option value="" selected="">選択</option>
+                                        <option value="1">北海道</option>
+                                        <option value="2">青森県</option>
+                                        <option value="3">岩手県</option>
+                                        <option value="4">宮城県</option>
+                                        <option value="5">秋田県</option>
+                                        <option value="6">山形県</option>
+                                        <option value="7">福島県</option>
+                                        <option value="8">茨城県</option>
+                                        <option value="9">栃木県</option>
+                                        <option value="10">群馬県</option>
+                                        <option value="11">埼玉県</option>
+                                        <option value="12">千葉県</option>
+                                        <option value="13">東京都</option>
+                                        <option value="14">神奈川県</option>
+                                        <option value="15">新潟県</option>
+                                        <option value="16">富山県</option>
+                                        <option value="17">石川県</option>
+                                        <option value="18">福井県</option>
+                                        <option value="19">山梨県</option>
+                                        <option value="20">長野県</option>
+                                        <option value="21">岐阜県</option>
+                                        <option value="22">静岡県</option>
+                                        <option value="23">愛知県</option>
+                                        <option value="24">三重県</option>
+                                        <option value="25">滋賀県</option>
+                                        <option value="26">京都府</option>
+                                        <option value="27">大阪府</option>
+                                        <option value="28">兵庫県</option>
+                                        <option value="29">奈良県</option>
+                                        <option value="30">和歌山県</option>
+                                        <option value="31">鳥取県</option>
+                                        <option value="32">島根県</option>
+                                        <option value="33">岡山県</option>
+                                        <option value="34">広島県</option>
+                                        <option value="35">山口県</option>
+                                        <option value="36">徳島県</option>
+                                        <option value="37">香川県</option>
+                                        <option value="38">愛媛県</option>
+                                        <option value="39">高知県</option>
+                                        <option value="40">福岡県</option>
+                                        <option value="41">佐賀県</option>
+                                        <option value="42">長崎県</option>
+                                        <option value="43">熊本県</option>
+                                        <option value="44">大分県</option>
+                                        <option value="45">宮崎県</option>
+                                        <option value="46">鹿児島県</option>
+                                        <option value="47">沖縄県</option>
+                                    </select>
+                                    <div class="c-error-text">※選択ください。</div>
+                                </div>
+                        </td>
+                        <td>
+                            <div class="col-12 u-col-p-none">
+                                <input type="text" class="c-form-control-error form-control" placeholder="例）〇〇〇〇〇〇工事" name="text1" value="">
+                                <div class="c-error-text">※入力に誤りがあります。</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-group p-radio-group">
+                                <div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input"><label class="custom-control-label u-label-p-none" for="customRadioInline1">有</label></div>
+                                <div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input"><label class="custom-control-label" for="customRadioInline2">無</label>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                        <button class="btn-delete"><i class="circle-ph-x ph-x"></i></button>
+                        </td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+</div> <%#c-add-table-%>
+            <button class="btn-add genric-btn p-add-btn mt-small u-has-display-block mb-small"><i class="btn-ph-plus ph-plus"></i>さらに追加する</button>
+        
+        <div class="form-group grid-layout--274-634 u
+
+-border-top-dashed u-border-bottom-dashed-none">
+            <div class="p-new-registration__iteme--2">
+            <label class="col-274 col-form-label">その他事業</label>
+            <span class="c-check u-has-display-block m-small-right">必須</span>
+            <div class="col-634">
+                <input type="text" class="p-input-width c-form-control-error form-control u-has-inline-block" placeholder="" name="農業農村整備事業" value=""><span class="u-has-inline-block m-small-left-custom">件</span>
+            <div class="c-error-text">※必須項目のため入力してください。</div>
+            </div> 
+        </div>
+    </div>
+
+        <div class="form-step-table-theme--1">
+            <div class="c-lead mt-medium pb-small"> 参考実績を年度の新しいものから順に入力ください（最大20件） </div>
+            <table class="form-table-theme--1">
+                <thead class="has-background-thead">
+                    <tr class="thead-form-table">
+                        <th>発注者</th>
+                        <th>施工年度</th>
+                        <th>施工場所<br>（都道府県名）</th>
+                        <th>件名</th>
+                        <th>報文の<br>有無</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                <% for (var i = 0; i < 2; i++) { %>
+                    <tr>
+                        <td>
+                            <div class="col-12 u-col-p-none">
+                                <input type="text" class="c-form-control-error form-control" placeholder="例）株式会社◯◯◯◯◯◯" name="text2" value="福岡県飯塚県土整備事務所">
+                                <div class="c-error-text">※入力に誤りがあります。</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col-12 u-construction u-col-p-none">
+                                <input type="text" class="form-control" placeholder="2021" name="text" value="2021"><span>年度</span>
+                            </div>
+                        </td>
+                        <td>
+                                <div class="table-select--icon">
+                                    <select class="c-form-control-error form-control is-empty table-select" name="select2">
+                                        <option value="" selected="">選択</option>
+                                        <option value="1">北海道</option>
+                                        <option value="2">青森県</option>
+                                        <option value="3">岩手県</option>
+                                        <option value="4">宮城県</option>
+                                        <option value="5">秋田県</option>
+                                        <option value="6">山形県</option>
+                                        <option value="7">福島県</option>
+                                        <option value="8">茨城県</option>
+                                        <option value="9">栃木県</option>
+                                        <option value="10">群馬県</option>
+                                        <option value="11">埼玉県</option>
+                                        <option value="12">千葉県</option>
+                                        <option value="13">東京都</option>
+                                        <option value="14">神奈川県</option>
+                                        <option value="15">新潟県</option>
+                                        <option value="16">富山県</option>
+                                        <option value="17">石川県</option>
+                                        <option value="18">福井県</option>
+                                        <option value="19">山梨県</option>
+                                        <option value="20">長野県</option>
+                                        <option value="21">岐阜県</option>
+                                        <option value="22">静岡県</option>
+                                        <option value="23">愛知県</option>
+                                        <option value="24">三重県</option>
+                                        <option value="25">滋賀県</option>
+                                        <option value="26">京都府</option>
+                                        <option value="27">大阪府</option>
+                                        <option value="28">兵庫県</option>
+                                        <option value="29">奈良県</option>
+                                        <option value="30">和歌山県</option>
+                                        <option value="31">鳥取県</option>
+                                        <option value="32">島根県</option>
+                                        <option value="33">岡山県</option>
+                                        <option value="34">広島県</option>
+                                        <option value="35">山口県</option>
+                                        <option value="36">徳島県</option>
+                                        <option value="37">香川県</option>
+                                        <option value="38">愛媛県</option>
+                                        <option value="39">高知県</option>
+                                        <option value="40">福岡県</option>
+                                        <option value="41">佐賀県</option>
+                                        <option value="42">長崎県</option>
+                                        <option value="43">熊本県</option>
+                                        <option value="44">大分県</option>
+                                        <option value="45">宮崎県</option>
+                                        <option value="46">鹿児島県</option>
+                                        <option value="47">沖縄県</option>
+                                    </select>
+                                    <div class="c-error-text">※選択ください。</div>
+                                </div>
+                        </td>
+                        <td>
+                            <div class="col-12 u-col-p-none">
+                                <input type="text" class="c-form-control-error form-control" placeholder="例）〇〇〇〇〇〇工事" name="text2" value="遠賀川護岸工事">
+                                <div class="c-error-text">※入力に誤りがあります。</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-group p-radio-group">
+                                <div class="custom-control custom-radio custom-control-inline"><input type="radio" id="a" name="a" class="custom-control-input"><label class="custom-control-label u-label-p-none" for="a">有</label></div>
+                                <div class="custom-control custom-radio custom-control-inline"><input type="radio" id="b" name="b" class="custom-control-input"><label class="custom-control-label" for="b">無</label>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                        <button class="btn-delete"><i class="circle-ph-x ph-x"></i></button>
+                        </td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+            <button class="btn-add genric-btn p-add-btn mt-small u-has-display-block mb-small"><i class="btn-ph-plus ph-plus"></i>さらに追加する</button>
+        </div>
+        <!--form-step-table-theme--1-->
+        <div class="form-group grid-layout--274-634 u-border-top-dashed u-border-bottom-dashed">
+            <div class="p-new-registration__iteme--2" total-data="total">
+            <label class="col-274 col-form-label">採用実績合計</label>
+            <div class="col-634">30件</div>
+        </div>
+        </div>
+        <%#p-new-registration__iteme--number%>
+        <div class="mt-small">
+            <div class="btns-group">
+                <button type="submit" class="c-genric-btn p-genric-btn--secondary u-default-border mt-small u-has-display-block" data-formrun-default-text="戻る "><i class="btn-ph-caret-left ph-caret-left"></i>戻る </button>
+                <button type="submit" class="genric-btn p-genric-btn--primary mt-small u-has-display-block">次へ<i class="btn-ph-caret-right ph-caret-right"></i>
+                </button>
+            </div>
+            <button type="submit" class="c-genric-btn p-genric-btn--secondary u-default-border mt-small u-has-display-block">ここまでを保存する
+            </button>
+    </div> <%# wrapper--1360 %>
+</div> <%# form--step %>
+</form>

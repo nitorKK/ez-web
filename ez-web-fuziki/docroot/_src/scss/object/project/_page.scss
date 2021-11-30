@@ -1,0 +1,13 @@
+.p-search__body--col-2 {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: center;
+}
+
+.no-search {
+  color: var(--text-black);
+
+  &:hover {
+    color: var(--text-black);
+  }
+}

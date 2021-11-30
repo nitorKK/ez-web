@@ -1,0 +1,43 @@
+<% 
+let text="技術情報の内容更新を行いました"  
+let data="2021/04/27。"  
+let recordText="[1199] 合成樹脂製急速空気弁・補修弁"  
+let recordTextsc="[1189] MAX推進管" 
+%>
+<div class="col-lg-6">
+  <div class="l-topic">
+    <h2 class="c-title-h2 mt-medium pb-small">新着情報</h2>
+<ul class="p-topic">
+  <% let ary = ['2021/04/27', '2021/04/28', '2021/04/29']; %>
+  <% ary.forEach(function (value, key) { %>
+  <li>
+    <div class="p-topic__header">
+        <span class="p-topic__data">
+            <%= value %>
+        </span>
+    </div>
+
+    <div class="p-topic__body">
+        <div class="p-topic__title">
+            <%- text %>
+        </div>
+        <div class="p-topic__text">
+            <a href="#">
+                <%- recordText %>
+            </a>
+        </div>
+        <div class="p-topic__text">
+            <a href="#">
+                <%- recordTextsc %>
+            </a>
+        </div>
+        <div class="p-topic__text">
+                <%- recordTextsc %>
+        </div>
+    </div>
+ </li>
+ <% }); %>
+</ul>
+    <button type="button" class="genric-btn p-topic-btn mt-small id="toastr-success-top-right">一覧を見る<i class="ph-caret-right"></i></button>
+</div>
+</div>

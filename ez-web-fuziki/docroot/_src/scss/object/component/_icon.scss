@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.nntd-icon {
+  text-decoration: underline;
+}
+
+.nntd-icon::after {
+  margin: 1em .4em;
+  vertical-align: middle;
+  content: url(../img/mypage-icon.svg);
+}
+
+.nntd-icon2::after {
+  position: absolute;
+  top: calc(50% - .7em);
+  right: 1rem;
+  vertical-align: middle;
+  content: url(../img/mypage-icon2.svg);
+}

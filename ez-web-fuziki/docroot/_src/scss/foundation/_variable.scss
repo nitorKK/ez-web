@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+/* ================================================================================
+FileName: _variable.scss
+================================================================================ */
+
+:root {
+  --color-primary: #19af54;//青
+  --color-secondary: #d1efdd;//パネル系背景：水色
+  --color-danger: #fd5a1e;//警告hover
+  --color-danger-bg: #f4cccc;//警告
+  --color-tertiary: #dce9f7;//水色
+  --color-quaternary: #d8e5f0;//mypage-color-primary
+  --color-quinary: #f3f3f3;//table背景
+  --color-senary: #034076;//link
+  --text-black: #282e30;//text黒
+  --error-bg: #faece5;//エラー背景
+  --red: #c92e00;//text赤
+  --red-secondary: #f00;//text赤
+  --color-table: #ccc;//table
+  --color-swiper: #ccc;//swiper背景
+  --color-border: #ccc;//ボーダー
+  --color-footer: #034076;//footer
+  --color-mypage-footer: #3d7cb2;//footer
+  --color-grey: #ccc;//placeholder
+  --color-message-modal-orange: #c92e00b5;
+  --color-message-modal-bleu: #034076bf;
+  --color-admin-bg: #78a4c9;
+  --modal-duration: 1s;
+  --animation-duration: .8s;
+}
+
+$width-pc-max: 1286px;
+$width-pc-content-max: 1000px;
+
+$easeOutSine:cubic-bezier(.39,  .575, .565, 1);
+
+$color-white:#fff;
+
+//コンテンツ幅margin
+$m-small:2rem;
+
+$mt-small:2rem;
+$mt-medium :4rem;
+$mt-large :6rem;
+
+$mb-small:2rem;
+$mb-medium :4rem;
+$mb-large :6rem;
+
+//コンテンツ幅padding
+$p-small:2rem;
+$p-medium :4rem;
+
+$pt-small:2rem;
+$pt-medium :4rem;
+$pt-large :6rem;
+
+
+$pb-small:2rem;
+$pb-medium :4rem;
+$pb-large :6rem;
+

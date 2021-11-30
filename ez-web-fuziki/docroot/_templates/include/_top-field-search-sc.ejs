@@ -1,0 +1,53 @@
+<% let text = "すべて" 
+   let number = "1件" 
+   let textsc = "ダム" 
+   let numbersc = "0件" 
+   let textnone = "コンクリート殻・アスファルト殻"
+   let numbernone = "975件" 
+%>
+  <ul class="p-accordion-area__secondary">
+  <% let ary = ['パイプライン補修工法', 'パイプライン更生工法', 'ほ場整備・営農施設', '環境配慮対策', '建設副産物', '電子納品', '施設の維持管理', '資源循環', '自然エネルギー活用', '農地の除塩・除染']; %>
+  <% ary.forEach(function (value, key) { %>
+<li>
+    <div class="p-field-title plus">
+        <%= value %>
+    </div>
+    <div class="p-panel field-contents">
+        <div class="row">
+            <div class="col-12">
+                <div class="c-card card-m">
+                    <div class="c-card__body">
+                        <ul class="list">
+                            <a href="#">
+                                <li>
+                                    <%- text %>
+                                </li>
+                                <li>
+                                    <%- number %>
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="c-card card-m">
+                    <div class="c-card__body">
+                        <ul class="list">
+                            <a href="#" class="no-search disabled">
+                                <li>
+                                    <%- textnone %>
+                                </li>
+                                <li>
+                                    <%- numbernone %>
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+    <% }); %>
+</ul>

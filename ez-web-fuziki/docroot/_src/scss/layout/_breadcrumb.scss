@@ -1,0 +1,26 @@
+
+
+.l-breadcrumb{
+  max-width: 1000px;
+  margin: auto;
+}
+
+.l-breadcrumb--list{
+  margin-bottom: 0;
+  background-color: transparent;
+
+  > li {
+    display: inline;
+    
+  }
+
+  > li::after {
+    padding: 0 1em;
+    color: var(--text-black);
+    content: ">";
+  }
+
+  > li:last-child::after {
+    content: "";
+  }
+}

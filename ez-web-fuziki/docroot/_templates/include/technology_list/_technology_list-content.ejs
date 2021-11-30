@@ -1,0 +1,165 @@
+  <div class="p-dashboard">
+    <div class="p-dashboard-header sticky-none">
+      <div class="u-text-color-primary -bold">技術情報</div>
+      <div class="p-dashboard-hed-btn-group">
+      <button type="submit" class="genric-btn p-genric-btn--primary-small  u-has-display-block m-small-right" onclick="location.href='#'">CSV出力</button><button type="submit" class="genric-btn p-genric-btn--primary-small  u-has-display-block" onclick="location.href='#'">新規登録</button>
+      </div><%#　p-dashboard-menu　%>
+    </div><%#　p-dashboard-header　%>
+
+<div class="p-dashboard-menu-wrap">
+<div class="p-dashboard-menu">
+    <div class="p-dashboard-menu__1 u-border-right-solid">
+        <span class="-bold">登録番号</span>
+        <div class="p-dashboard-menu__number">
+            <input type="text" class="form-control p-dashboard-control" placeholder="0000" name="text1" value="">
+            <span>&#65374;</span>
+            <input type="text" class="form-control p-dashboard-control" placeholder="0000" name="text1" value="">
+        </div><%#　p-dashboard-menu-input__number　%>
+    </div><%#　p-dashboard-menu__1　%>
+
+    <div class="p-dashboard-menu__2 u-border-right-solid">
+        <span class="-bold">技術名称</span>
+        <div class="p-dashboard-menu__number">
+            <input type="text" class="form-control p-dashboard-control-2" placeholder="" name="text1" value="">
+        </div><%#　p-dashboard-menu-input__number　%>
+    </div><%#　p-dashboard-menu__2　%>
+
+    <div class="p-dashboard-menu__3">
+        <span class="-bold">ステータス</span>
+        <div class="p-dashboard-menu__number dashboard-select-icon--1">
+        <select class="form-control p-dashboard-control-3" name="select">
+        <option value="0">承認済</option>
+        <option value="1">未更新</option>
+        <option value="2">廃止</option>
+        </select>
+        </div><%#　p-dashboard-menu-input__number　%>
+    </div><%#　p-dashboard-menu__3　%>
+</div><%#　p-dashboard-menu　%> 
+
+<div class="p-dashboard-menu-2column">
+<div class="p-dashboard-menu pt-small-xsm pb-xsm">
+    <div class="p-dashboard-menu__1 u-border-right-solid">
+        <span class="-bold">企業番号</span>
+        <div class="p-dashboard-menu__number">
+            <input type="text" class="form-control p-dashboard-control" placeholder="0000" name="text1" value="">
+            <span>&#65374;</span>
+            <input type="text" class="form-control p-dashboard-control" placeholder="0000" name="text1" value="">
+        </div><%#　p-dashboard-menu-input__number　%>
+    </div><%#　p-dashboard-menu__1　%>
+
+    <div class="p-dashboard-menu__2 u-border-right-solid">
+        <span class="-bold">企業名</span>
+        <div class="p-dashboard-menu__number">
+            <input type="text" class="form-control p-dashboard-control-2" placeholder="" name="text1" value="">
+        </div><%#　p-dashboard-menu-input__number　%>
+    </div><%#　p-dashboard-menu__2　%>
+
+    <div class="p-dashboard-menu__3">
+        <span class="-bold">会員種別</span>
+        <div class="p-dashboard-menu__number dashboard-select-icon--1">
+        <select class="form-control p-dashboard-control-3" name="select">
+        <option value="0">選択しない</option>
+        <option value="1">会員</option>
+        <option value="2">非会員</option>
+        </select>
+        </div><%#　p-dashboard-menu-input__number　%>
+    </div><%#　p-dashboard-menu__3　%>
+</div><%#　p-dashboard-menu　%> 
+
+<div class="dashboard-btn-group">
+    <button type="submit" class="c-genric-btn p-genric-btn--secondary-small u-width70 u-default-border u-has-display-block" onclick="location.href='#'">クリア</button><button type="submit" class="genric-btn p-genric-btn--primary-small u-width70 u-has-display-block" onclick="location.href='#'">検索</button>
+</div>
+</div>
+
+    <div class="p-dashboard-body">
+    <div class="p-table-pagination-wrap p-table-pagination-up">
+    <div class="p-table-pagination-left">
+    <p class="total-deta">1-20件 / 全2000件</p>
+    
+    <nav class="pagination-container">
+    <ul class="pagination">
+        <li class="first disabled"><a href="#"><i class="fas fa-angle-double-left"></i>最初へ</a></li>
+        <li class="prev disabled"><a href="#"><i class="fas fa-angle-left"></i>前へ</a></li>
+        <li class="page active"><a href="#">1</a></li>
+        <li class="page"><a href="#">2</a></li>
+        <li class="page"><a href="#">3</a></li>
+        <li class="next"><a href="#">次へ<i class="fas fa-angle-right"></i></a></li>
+        <li class="last"><a href="#">最後へ<i class="fas fa-angle-double-right"></i></a></li>
+    </ul>
+    </nav>
+    </div><%#　p-table-pagination-left　%>
+ 
+    <div class="p-table-pagination-right">
+    <div class="p-select-field p-dashboard-menu__number dashboard-select-icon--1">
+    <select class="form-control p-dashboard-control-3" name="select">
+    <option value="0">請求書</option>
+    <option value="1">登録承諾書</option>
+    <option value="2">メール便配送用送り</option>
+    </select>
+    </div>
+    <div class="p-dashboard-hed-btn-group">
+    <button type="submit" class="genric-btn p-genric-btn--primary-small  u-has-display-block" onclick="location.href='#'">PDF出力</button>
+    </div>
+   </div><%#　p-table-pagination-right　%>
+</div><%#　p-table-pagination-wrap　%>
+
+  <div class="p-dashboard-table">
+    <table class="dashboard-table-theme">
+        <thead class="has-background-thead">
+            <tr>
+                <th class="p-checkbox-cell">
+                <div class="c-checkbox">
+                <label>
+                <input type="checkbox" name="checkbox"><i></i>
+                </label>
+                </div>
+                </th>
+                <th class="sorting">登録番号</th>
+                <th class="sorting">技術名称</th>
+                <th class="sorting">企業番号</th>
+                <th class="sorting">企業名</th>
+                <th class="sorting">会員種別</th>
+                <th class="sorting">ステータス</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% for (var i = 0; i < 30; i++) { %>
+            <tr>
+                <td>
+                <div class="c-checkbox">
+                <label>
+                <input type="checkbox" name="checkbox"><i></i>
+                </label>
+                </div>
+                </td>
+                <td>
+                    <a class="u-text-decoration-underline u-has-display-block" href="#">0000</a>
+                </td>
+                <td>技術名称技術名称技術名称技術技術名称技術名称技術名称技術名称技術名…</td>
+                <td>0000</td>
+                <td>株式会社XXXXXXXXXXXXXXXXXX…</td>
+                <td>会員</td>
+                <td>承認済</td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+
+    <div class="p-table-pagination-down">
+    <p class="total-deta">1-20件 / 全2000件</p>
+    <nav class="pagination-container">
+    <ul class="pagination">
+        <li class="first disabled"><a href="#"><i class="fas fa-angle-double-left"></i>最初へ</a></li>
+        <li class="prev disabled"><a href="#"><i class="fas fa-angle-left"></i>前へ</a></li>
+        <li class="page active"><a href="#">1</a></li>
+        <li class="page"><a href="#">2</a></li>
+        <li class="page"><a href="#">3</a></li>
+        <li class="next"><a href="#">次へ<i class="fas fa-angle-right"></i></a></li>
+        <li class="last"><a href="#">最後へ<i class="fas fa-angle-double-right"></i></a></li>
+    </ul>
+    </nav>
+    </div>
+    </div><%#　p-dashboard-table　%>
+    </div><%#　p-dashboard-body　%>
+    </div><%#　p-dashboard-menu-wrap　%>
+    </div><%#　p-dashboard　%>

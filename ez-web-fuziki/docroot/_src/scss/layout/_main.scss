@@ -1,0 +1,79 @@
+.l-container {
+  /*  flex: 1; */
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: auto;
+  margin-bottom: $mt-small;
+  margin-bottom: $mt-medium;
+
+  @include mq("lg") {
+    max-width: $width-pc-content-max;
+    /* padding-right: 0;
+    padding-left: 0; */
+  }
+}
+
+.l-container-sub {
+  max-width: $width-pc-content-max;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.l-container-auto {
+  width: $width-pc-max;
+  /*   padding-right: 40px;
+  padding-left: 40px; */
+  margin: auto;
+  margin-bottom: $mt-small;
+  margin-bottom: $mt-medium;
+  /*   @include mq("lg") {
+    padding-right: 0;
+    padding-left: 0;
+  } */
+  /*   @include mq("lg") {
+    .col-12 {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    .col-3 {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  } */
+}
+
+.l-has-background {
+  @include mq("xsm") {
+    padding: 0 20px;
+    /*    margin-top: 0; */
+  }
+  @include mq("lg") {
+    padding: 20px;
+    margin-top: $mt-small;
+  }
+  background: var(--color-secondary);
+}
+
+//分野検索のtable
+
+.l-table {
+  @include mq("xsm") {
+    margin-top: $mt-small;
+  }
+}
+
+//技術情報詳細のpanel
+
+.l-panel-table,
+.l-table__panel {
+  max-idth: 1000px;
+}
+
+
+//field_search
+
+.search-area-check-wrapper{
+  width: 100%;
+  max-width: 1286px;
+}

@@ -1,0 +1,223 @@
+@charset "UTF-8";
+
+.login {
+  text-align: center;
+}
+
+.c-check {
+  min-width: 32px;
+  padding: 2px 5px;
+  /*   margin-left: 10px; */
+  color: $color-white;
+  text-align: center;
+  background-color: var(--red);
+  border-radius: .313rem;
+  @include font-size(11);
+}
+
+.c-no-check {
+  min-width: 32px;
+  padding: 2px 5px;
+  /*   margin-left: 10px; */
+  color: $color-white;
+  text-align: center;
+  background-color: var(--color-grey);
+  border-radius: .313rem;
+  @include font-size(11);
+}
+
+.c-form {
+  display: grid;
+  grid-template-columns: 145px 1fr;
+  align-items: center;
+  max-width: 1000px;
+  /*   width: 100%;
+  max-width: 1145px; */
+  padding: 0 1.4rem;
+  margin: auto;
+  border-bottom: 1px dashed var(--color-border);
+  @include mq("md") {
+    padding: 0 4.5rem;
+  }
+
+  input[ type = "text" ] {
+    width: 450px;
+    padding: 2.4rem .75rem;
+    margin: auto;
+    margin-left: 150px;
+  }
+}
+
+.c-form-body {
+
+  .text-danger {
+    display: none;
+  }
+
+  > span {
+    /*     max-width: 450px;
+    margin: auto;
+    margin-left: 40px; */
+  }
+}
+
+.c-form-long-text {
+  display: grid;
+  grid-template-columns: 245px 1fr;
+  align-items: center;
+  max-width: 1000px;
+  /*   width: 100%;
+  max-width: 1145px; */
+  padding: 0 1.4rem;
+  margin: auto;
+  border-bottom: 1px dashed var(--color-border);
+  @include mq("md") {
+    padding: 0 4.5rem;
+  }
+
+  input[ type = "text" ] {
+    width: 450px;
+    padding: 2.4rem .75rem;
+    margin: auto;
+    margin-left: 40px;
+  }
+}
+
+.c-form-admin {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  align-items: center;
+  max-width: 1000px;
+  padding: 0 1.4rem;
+  /*   margin: auto; */
+  border-bottom: none;
+  @include mq("md") {
+    padding: 0 8.8rem;
+  }
+
+  input[ type = "text" ] {
+    width: 380px;
+    padding: 1.8rem .75rem;
+    margin-left: 15px;
+    text-align: left;
+  }
+
+  input[ type = "password" ] {
+    width: 380px;
+    padding: 1.8rem .75rem;
+    margin-left: 15px;
+    text-align: left;
+  }
+
+  .c-form__text {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 0;
+    font-weight: bold;
+  }
+}
+
+.c-form-body {
+  position: relative;
+}
+
+.c-form__text {
+  display: flex;
+  align-items: center;
+  padding: 2.4rem 0;
+  font-weight: bold;
+}
+
+.login {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+//管理システム
+
+.admin-wrapper {
+  position: relative;
+  height: 100vh;
+  text-align: center;
+
+  img {
+    width: 240px;
+  }
+
+  &__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 75rem;
+    padding: 5rem;
+    background: $color-white;
+    border: 1px solid var(--color-border);
+    border-radius: .25rem;
+    transform: translate(-50%, -50%);
+    /*     background: #ccc; */
+  }
+}
+
+.eye-icon-hide {
+
+  &::after {
+    position: absolute;
+    top: calc(50% - .7em);
+    right: 0;
+    content: url(../img/eye-icon-hide.svg);
+  }
+}
+
+.error {
+  display: none;
+  padding: 2rem 1rem;
+  color: var(--red);
+  text-align: center;
+  background: var(--error-bg);
+  border-radius: .25rem;
+  @include font-size(15);
+}
+
+
+
+/* .email_error {
+  margin-top: 1rem;
+}
+ */
+
+.id_error,
+.pass_error {
+  display: none;
+  margin-bottom: 1rem;
+  margin-left: 15px;
+  color: var(--red);
+  text-align: left;
+  @include font-size(15);
+}
+
+.eye-icon-show {
+
+  &::after {
+    position: absolute;
+    top: calc(50% - .6em);
+    right: 0;
+    content: url(../img/eye-icon-show.svg);
+  }
+}
+
+.eye {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  z-index: 10;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.error-eye{
+  top: calc(50% - 1.1em);
+}
+

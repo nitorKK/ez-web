@@ -1,0 +1,98 @@
+@charset "UTF-8";
+/* ================================================================================
+FileName: _swiper.scss
+================================================================================ */
+
+.js-swiper-calender {
+
+  .swiper-scrollbar-drag {
+    background: #d9d9d9;
+  }
+
+  .swiper-scrollbar {
+    background-color: transparent;
+  }
+
+  &.swiper-container-horizontal {
+
+    > .swiper-scrollbar {
+      top: 0;
+      bottom: auto;
+      width: 100%;
+    }
+  }
+}
+
+.js-swiper-navigation--is-active {
+
+  .js-swiper-navigation--item {
+    color: $colorVeryLightBrown;
+    pointer-events: none;
+    border-bottom-color: $colorVeryLightBrown;
+  }
+
+  .c-icon{
+
+    &--les-calender-off {
+      background-image: url("/assets/img/lesson/icon-lesson-calender.svg");
+    }
+
+    &--les-humans-off {
+      background-image: url("/assets/img/lesson/icon-lesson-humans.svg");
+    }
+
+    &--les-pin-off {
+      background-image: url("/assets/img/lesson/icon-lesson-pin.svg");
+    }
+
+    &--les-list-off {
+      background-image: url("/assets/img/lesson/icon-lesson-list.svg");
+    }
+  }
+}
+
+.js-tab {
+
+  @include mq() {
+    padding-bottom: 40px;
+  }
+}
+
+.js-tab-ui {
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    overflow: hidden;
+    text-indent: -99px;
+    background: url("../img/common/icon-arrow.svg") no-repeat center / contain;
+
+    @include mq(){
+      display: none;
+    }
+  }
+
+  .swiper-button-prev{
+    left: -32px;
+    transform: scale(-1, 1);
+  }
+
+  .swiper-button-next {
+    right: -32px;
+  }
+
+  &__calender {
+    display: none;
+
+    &.js-tab-ui--is-active {
+      display: block;
+    }
+  }
+
+  &__etc {
+    display: none;
+
+    &.js-tab-ui--is-active {
+      display: block;
+    }
+  }
+}

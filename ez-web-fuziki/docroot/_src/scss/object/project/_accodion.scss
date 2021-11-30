@@ -1,0 +1,255 @@
+@charset "UTF-8";
+
+.p-accordion-area,
+.p-accordion-area__secondary,.p-accordion-side{
+  width: 100%;
+  max-width: 900px;
+}
+
+/* .c-accordion-area {
+  > li:nth-child(1) {
+    border-top: none;
+    @include mq("md") {
+      border-top: 1px solid rgb(36, 50, 180);
+      }
+  }
+  > li {
+    border-top: 1px solid rgb(36, 50, 180);
+    @include mq("md") {
+    border-top: 1px solid rgb(36, 50, 180);
+    }
+
+  }
+} */
+
+/* .c-accordion-area__secondary {
+  > li:first-child {
+    border-top: none;
+  }
+  > li:last-child {
+    border-bottom: 1px solid rgb(16, 185, 87);
+  }
+  > li:nth-child(1) {
+    border-top: 1px solid rgb(16, 185, 87);
+  }
+} */
+
+.p-accordion-area {
+
+  > li {
+    @include font-size(18);
+    @include mq("lg") {
+      @include font-size(16);
+    }
+    border-top: 1px solid var(--color-border);
+  }
+
+  > li:nth-child( 1 )  {
+    border-top: none;
+    @include mq("lg") {
+      border-top: 1px solid var(--color-border);
+    }
+  }
+
+  > li:last-child {
+    border-bottom: 1px solid var(--color-border);
+  }
+}
+
+.p-accordion-area__secondary {
+
+  > li {
+    border-top: 1px solid var(--color-border);
+  }
+
+  > li:first-child {
+    border-top: none;
+    @include mq("lg") {
+      border-top: 1px solid var(--color-border);
+    }
+  }
+
+  > li:last-child {
+    border-bottom: 1px solid var(--color-border);
+  }
+}
+
+.p-accordion-area__secondary {
+  @include mq("lg") {
+    padding-bottom: 0;
+  }
+  padding-bottom: 20px;
+}
+
+.p-accordion-side {
+
+  > li {
+    border-top: 1px solid var(--color-border);
+  }
+
+  > li:first-child {
+    border-top: none;
+  }
+
+  > li:last-child {
+    border-bottom: 1px solid var(--color-border);
+  }
+}
+
+/* アコーディオンタイトル */
+
+.p-search-title,
+.plus {
+  position: relative;
+  padding: 1rem 0;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+/* li:first-child [ data-type = "rock" ]{
+  @include mq("lg") {
+    border-top: 1px solid var(--color-quaternary);
+  }
+} */
+
+.p-search-title {
+
+  > span {
+    display: block;
+    padding-right: 70px;
+    text-align: right;
+  }
+}
+
+/* アイコンの＋と× */
+
+.plus {
+
+  &::after {
+    position: absolute;
+    top: 48%;
+    right: 15px;
+    width: 15px;
+    height: 2px;
+    content: "";
+    background-color: var(--color-primary);
+    transform: rotate(90deg);
+  }
+
+  &::before {
+    position: absolute;
+    top: 48%;
+    right: 15px;
+    width: 15px;
+    height: 2px;
+    content: "";
+    background-color: var(--color-primary);
+    transition: 1s;
+    transform: rotate(0deg);
+  }
+}
+
+.js-field--open,
+.js-search--open,
+.js-keywordSearch--open,.js-table--open{
+
+  &::after {
+    top: 48%;
+    right: 15px;
+    transition: .1s;
+    transform: rotate(0deg);
+  }
+}
+
+.p-panel {
+  display: none;
+}
+
+.list {
+
+  > li {
+    color: var(--color-primary);
+    @include mq("md") {
+      padding-right: 40px;
+    }
+  }
+
+  > a,
+  span {
+    display: grid;
+    @include mq("sp") {
+      grid-template-columns: 160px 1fr;
+    }
+    padding: 0 15px  0 5px;
+    line-height: 2.5;
+    @include mq("xsm") {
+      grid-template-columns: 230px 1fr;
+    }
+    @include mq("md") {
+      /* grid-template-columns: 1fr 1fr; */
+      padding: 0 4rem 0 2rem;
+      line-height: initial;
+    }
+  }
+
+  li:last-child {
+    width: 100%;
+    text-align: right;
+  }
+}
+
+.p-search--border {
+
+  > li:first-child {
+    @include mq("lg") {
+      border-top: none;
+      border-bottom: none;
+    }
+  }
+
+  > li:last-child {
+    @include mq("xsm") {
+      border-top: none;
+      border-bottom: none;
+    }
+  }
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+
+ul.side {
+
+  > a {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    @include font-size(14);
+  }
+}
+
+
+.border-panel{
+  border-top: 1px dashed var(--color-border);
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.border-panel-secondary{
+  border-top: 1px dashed var(--color-border);
+  border-bottom: 1px dashed var(--color-border);
+}
+
+//
+
+.title{
+  padding: 5px 0 5px 5px;
+}
+
+.box {
+
+  > ul li{
+    padding: 5px 0 5px 5px;
+  }
+  display: none;
+  padding: 5px 0 5px 5px;
+}

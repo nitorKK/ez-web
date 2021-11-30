@@ -1,0 +1,17 @@
+.l-video iframe {
+  width: 80%;
+  height: 40rem;
+}
+
+.video {
+  width: 80%;
+}
+
+.c-video-text {
+  width: 80%;
+  padding-top: .5rem;
+  margin: auto;
+  text-align: left;
+}
+
+/*# sourceMappingURL=../../maps/object/component/error-message.css.map */

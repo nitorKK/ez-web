@@ -1,0 +1,136 @@
+
+//マーカー
+$marker:linear-gradient(transparent 60%, #fff700 60%);
+
+$breakpoint-xsm: 320px !default;
+$breakpoint-sm: 576px !default;
+$breakpoint-md: 768px !default;
+$breakpoint-lg: 1000px !default;
+ 
+@mixin xsm {
+  @media screen and ( min-width : ( $breakpoint-xsm ) ) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media screen and ( min-width : ( $breakpoint-sm ) ) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and ( min-width : ( $breakpoint-md ) ) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and ( min-width : ( $breakpoint-lg ) ) {
+    @content;
+  }
+}
+
+// mixin    @include mq("md") {}
+$breakpoints: (
+  "sp":"screen and (max-width: 370px)",
+  "xsm":"screen and (min-width: 320px)",
+  "sm":"screen and (min-width: 576px)",
+  "md":"screen and (min-width: 768px)",
+  "lg":"screen and (min-width: 1000px)",
+  "admin-breakpoint":"screen and (max-width: 1024px)",
+  "admin-breakpoint-m":"screen and (min-width: 1025px)",
+  "lgxx":"screen and (min-width: 1600px)",
+) !default;
+
+@mixin mq($breakpoint: sm) {
+  @media #{map-get( $breakpoints, $breakpoint )} {
+    @content;
+  }
+}
+
+//@include flexbox;
+@mixin flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+//@include font-size(16);
+@mixin flexbox_right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@mixin inline-flexbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+//フォントサイズ @include font-size(16);
+@mixin font-size($size: 24, $base: 16) {
+  font-size: $size + px;
+  font-size: ($size / ($base * .625)) + rem;
+}
+
+//リンクカラー　@include linkColor(#3cf);
+@mixin linkColor($color-main) {
+  color: $color-main;
+}
+
+//両端揃え @include justify();
+@mixin justify() {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+//要素の境界 @include border-radius(3);
+@mixin border-radius($radius) {
+  border-radius: $radius + rem;
+}
+
+//プレースホルダー @include placeholder($color-form);
+@mixin placeholder($color) {
+
+  &::placeholder {
+    color: $color;
+  }
+
+  // Edge
+
+  &::input-placeholder {
+    color: $color;
+  }
+}
+
+//横、縦セット @include aspect-ratio(); 初期値
+//            @include aspect-ratio(50px);　変更
+@mixin aspect-ratio($w-size:100%, $h-size:auto) {
+  display: block;
+  width: 100%;
+  max-width: $w-size;
+  height: $h-size;
+}
+
+
+//余白セット @include mp-set();
+@mixin mp-set($m-size, $p-size) {
+  padding: $p-size;
+  margin: $m-size;
+}
+
+// @include svg-header-pc--color("3d7cb2");
+@mixin svg-header-pc--color($color-pc) {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366.001 37.296"><path fill="%23#{$color-pc}" d="M3774.5,1037.3c-23.938,0-49.224-7.458-80.877-16.917-31.09-9.291-57-14.206-105.938-14.378H3288v-6H4654v6h-.244l.243,31.3Zm879.26-31.3H3588.134C3651.474,1006.045,4653.757,1006,4653.757,1006Z" transform="translate(-3288 -1000)"/></svg>');
+}
+
+// @include svg-header-sp--color("3d7cb2");
+@mixin svg-header-sp--color($color-sp) {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1889.951 138.383"><path fill="%23#{$color-sp}" d="M-285.112,126h1181.4L895.966.014S-539.713.208-539.658,0c68.082,0,103.387,19.817,145.906,57.9S-317.268,126-285.112,126Z" transform="translate(539.658 0.004)"/></svg>');
+}
+// @include svg-header-sp--color("fff");
+@mixin svg-header-sp--color2($color-sp2) {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 712.951 138.383"><path fill="%23#{$color-sp2}" d="M0 0h750v14H0z)"/></svg>');
+}

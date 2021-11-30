@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+.p-topic {
+  height: 150px;
+  -ms-overflow-style: none; 
+  scrollbar-width: none;  
+  overflow-y: scroll;
+
+  > li {
+    padding: 1rem 0;
+    line-height: 2;
+    @include mq("sm") {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  li:first-child {
+    margin-top: 2rem;
+  }
+}
+
+.p-detail{
+  height: 100%;
+
+  > li {
+    @include mq("xsm"){
+      padding: 1rem;
+    }
+    @include mq("lg"){
+      padding: 1rem 4rem;
+    }
+    line-height: inherit;
+  }
+}
+
+
+.p-topic__header{
+  @include mq("sm") {
+    padding-right: 4rem;
+  }
+
+  .p-topic__data{
+    font-weight: bold;
+  }
+}
+
+.p-topic::-webkit-scrollbar { 
+  display: none;
+} 
+
+/* .p-topic-body {
+
+
+  &__title {
+
+  }
+
+  &__text {
+
+  }
+} */

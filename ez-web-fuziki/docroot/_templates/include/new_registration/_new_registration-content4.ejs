@@ -1,0 +1,268 @@
+<form method="post" action="/">
+<div class="c-error-message mt-small mb-medium">入力内容に誤りがあります。修正箇所をご確認ください。</div>
+    <div class="c-subtitle has-background-secondary mt-small mb-small">
+        <span class="c-subtitle u-has-inline-block">図表・写真</span>
+    </div>
+
+    <table class="form-table-uploaded">
+        <thead>
+            <tr class="thead-uploaded-table">
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>
+                        <div class="col-12">
+                            図表・写真
+                            <span class="c-check u-has-inline-block m-small">必須</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="custom-file">
+                            <input type="file" id="file[1]" name="video" class="custom-file-input c-file js-file">
+                            <label class="c-error-file custom-file-label" for="fileUploader" data-browse="ファイルを参照する">
+                               未選択　※◯MBまで
+                            </label>
+                    <div class="c-file-error-text text-center">※ファイルサイズが大きすぎます。</div>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="btn-delete p-delete"><i class="circle-ph-x ph-x"></i></button>
+                    </td>
+                    <td>
+                        <div class="c-fileBtn">
+                            <label for="file[1]">PNG/JPEGを選択</label>
+                        </div>
+                    </td>
+                </tr>
+
+         <% const arrays = ['未選択　※◯MBまで','未選択　※◯MBまで']; %>
+          <% arrays.forEach(function (value) { %>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <div class="custom-file">
+                            <input type="file" id="file[1]" name="video" class="custom-file-input c-file js-file">
+                            <label class="custom-file-label" for="fileUploader" data-browse="ファイルを参照する">
+                           <%= value %>
+                            </label>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="btn-delete p-delete"><i class="circle-ph-x ph-x"></i></button>
+                    </td>
+                    <td>
+                        <div class="c-fileBtn">
+                            <label for="file[1]">PNG/JPEGを選択</label>
+                        </div>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+
+    <button class="btn-add genric-btn p-add-btn mt-small mb-small u-has-display-block"><i
+            class="btn-ph-plus ph-plus"></i>さらに追加する</button>
+
+
+    <div class="c-subtitle has-background-secondary mt-small mb-small">
+        <span class="c-subtitle u-has-inline-block">添付資料</span>
+    </div>
+
+<div class="p-new-registration__wrapper">
+    <% const array=['発表文献（最大5件）', '実績報文（最大5件）' , 'カタログ・パンフレット（最大3件）' , '単価・歩掛等（最大3件）' ]; %>
+        <% array.forEach(function (value) { %>
+            <div class="l-panel-table border-panel-secondary">
+                <ul class="p-table-accordion">
+                    <li>
+                        <div class="c-panel-title u-registration-text js-primary--panel plus">
+                            <%= value %><span class="c-no-check u-has-inline-block m-small">任意</span>
+                        </div>
+                <div class="form-step-table-theme--3">
+                        <div class="p-panel table-panel-contents">
+                            <table class="p-table-registration mb-small">
+                                <thead class="has-background-thead">
+                                    <tr class="thead-registration">
+                                        <th>資料アップロード</th>
+                                        <th>発行元等</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="u-flex u-align-item-center">
+                                                <div class="custom-file"><input type="file" id="file[1]" name="0"
+                                                        class="custom-file-input c-file js-file"><label
+                                                        class="c-error-file custom-file-label text-left" for="fileUploader"
+                                                        data-browse="ファイルを参照する"> 未選択　※◯MBまで </label>
+                                                <div class="c-tablefile-error-text  text-left">※ファイルサイズが大きすぎます。</div></div>
+                                                <div class="c-fileBtn-mini">
+                                                    <label for="file[1]">PDFを選択</label>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control text-left" id="inputtext1"
+                                                placeholder="例）株式会社◯◯◯◯◯◯" name="技術名称" value="">
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+            <% }); %>
+
+                <div class="l-panel-table border-panel-secondary">
+                    <ul class="p-table-accordion">
+                        <li>
+                            <div class="c-panel-title u-registration-text js-primary--panel plus">
+                                動画（最大3件）<span class="c-no-check u-has-inline-block m-small">任意</span>
+                            </div>
+                        <div class="form-step-table-theme--3">
+                            <div class="p-panel table-panel-contents registration-contents">
+                                <table class="p-table-registration mb-small">
+                                    <thead class="has-background-thead">
+                                        <tr class="thead-registration">
+                                        <th>資料アップロード</th>
+                                        <th>発行元等</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="u-flex u-align-item-center u-border-bottom-solid pt-small-xsm pb-xsm">
+                                                    <div class="input-group p-radio-2column">
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="customRadioInline1"
+                                                                name="customRadioInline1"
+                                                                class="custom-control-input garlic-auto-save">
+                                                            <label class="custom-control-label u-label-p-none"
+                                                                for="customRadioInline1">アップロード</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="customRadioInline2"
+                                                                name="customRadioInline1"
+                                                                class="custom-control-input garlic-auto-save"><label
+                                                                class="custom-control-label"
+                                                                for="customRadioInline2">YouTube</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="pt-small pb-xsm">
+                                                    <div class="p-mp4">
+                                                        <div class="p-mp4__item text-left">
+                                                            未選択　※◯MBまで
+                                                        </div>
+                                                        <div class="p-mp4__item text-right">
+                                                            <div class="c-fileBtn-mini"><label for="file[1]">MP4を選択</label></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="vertical-align-bottom">
+                                                <input type="text" class="form-control text-left" id="inputtext1"
+                                                    placeholder="例）株式会社◯◯◯◯◯◯" name="技術名称" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="u-flex u-align-item-center u-border-bottom-solid pt-small-xsm pb-xsm">
+                                                    <div class="input-group p-radio-2column">
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="customRadioInline1"
+                                                                name="customRadioInline1"
+                                                                class="custom-control-input garlic-auto-save">
+                                                            <label class="custom-control-label u-label-p-none"
+                                                                for="customRadioInline1">アップロード</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="customRadioInline2"
+                                                                name="customRadioInline1"
+                                                                class="custom-control-input garlic-auto-save"><label
+                                                                class="custom-control-label"
+                                                                for="customRadioInline2">YouTube</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-small-xsm">
+                                                <input type="text" class="form-control text-left garlic-auto-save" id="inputtext1" placeholder="https://youtube/sample" name="youtube" value="">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="vertical-align-bottom">
+                                                <input type="text" class="form-control text-left" id="inputtext1"
+                                                    placeholder="h例）株式会社◯◯◯◯◯◯" name="株式会社" value="">
+                                            </td>                                            
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+<div class="l-panel-table border-panel-secondary">
+    <ul class="p-table-accordion">
+        <li>
+            <div class="c-panel-title u-registration-text js-primary--panel plus">その他（最大3件）<span
+                    class="c-no-check u-has-inline-block m-small">任意</span>
+            </div>
+            <div class="form-step-table-theme--3">
+            <div class="p-panel table-panel-contents registration-contents" style="display: none;">
+                <table class="p-table-registration mb-small">
+                    <thead class="has-background-thead">
+                        <tr class="thead-registration">
+                            <th>資料アップロード</th>
+                            <th>発行元等</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="u-flex u-align-item-center mb-small-xsm">
+                                    <div class="custom-file"><input type="file" id="file[1]" name="0"
+                                            class="custom-file-input c-file js-file"><label
+                                            class="custom-file-label text-left" for="fileUploader"
+                                            data-browse="ファイルを参照する"> 未選択　※◯MBまで </label></div>
+                                    <div class="c-fileBtn-mini">
+                                        <label for="file[1]">PDFを選択</label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                            <input type="text" class="form-control text-left garlic-auto-save" id="inputtext1"
+                                    placeholder="例）株式会社◯◯◯◯◯◯" name="技術名称" value="">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </li>
+    </ul>
+</div>
+
+                <div class="mt-small">
+                    <div class="btns-group">
+                        <button type="submit" class="c-genric-btn p-genric-btn--secondary u-default-border mt-small u-has-display-block"
+                            data-formrun-default-text="戻る "><i class="btn-ph-caret-left ph-caret-left"></i>戻る </button>
+                        <button type="submit" class="genric-btn p-genric-btn--primary mt-small u-has-display-block">確認へ<i
+                                class="btn-ph-caret-right ph-caret-right"></i>
+                        </button>
+                    </div>
+                    <button type="submit"
+                        class="c-genric-btn p-genric-btn--secondary u-default-border mt-small u-has-display-block">ここまでを保存する
+                    </button>
+                </div>
+                <%# mt-small %>
+            </div>
+</form>

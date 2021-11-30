@@ -1,0 +1,176 @@
+// -- Margin Top --
+
+.m-small-xs{
+  margin: 1rem;
+}
+
+.m-small-xsm {
+  margin: .5rem;
+}
+
+.m-small-left-custom{
+  margin-left: .5rem;
+}
+
+.m-small-left-xsm {
+  margin-left: 1rem;
+}
+
+.m-small-xsm-left{
+  margin-left: 1rem;
+}
+
+.m-small-left{
+  margin-left: 2rem;
+}
+
+.m-small-right{
+  margin-right: 2rem;
+}
+
+.m-small {
+  margin: 1rem;
+}
+
+.mt-small-xsm {
+  margin-top: 1rem;
+}
+
+.mt-small {
+  margin-top: $mt-small;
+}
+
+.mt-medium {
+  @include mq("lg") {
+    margin-top: $mt-medium;
+  }
+}
+
+.mt-large {
+  margin-top: $mt-large;
+}
+
+.mt-large-xsm {
+  margin-top: 5rem;
+}
+
+// -- Margin Bottom --
+
+.mb-small-xsm {
+  margin-bottom: .5rem;
+}
+
+.mb-small-sm {
+  margin-bottom: 1rem;
+}
+
+
+.mb-small {
+  margin-bottom: $mb-small;
+}
+
+.mb-medium {
+  margin-bottom: $mb-medium;
+}
+
+.mb-large {
+  margin-bottom: $mb-large;
+}
+
+// -- Padding Top --
+
+.pt-small-xsm {
+  padding-top: .5rem;
+}
+
+.pt-small-sm {
+  padding-top: 1rem;
+}
+
+.pt-small {
+  padding-top: $pt-small;
+}
+
+.pt-medium {
+  padding-top: $pt-medium;
+}
+
+.pt-large {
+  padding-top: $pt-large;
+}
+
+//-- Padding Bottom --
+
+.pb-xsm {
+  padding-bottom: .5rem;
+}
+
+.pb-small-sm {
+  padding-bottom: 1rem;
+}
+
+.pb-small {
+  padding-bottom: $pb-small;
+}
+
+.pb-medium {
+  padding-bottom: $pb-medium;
+}
+
+.pb-large {
+  padding-bottom: $pb-large;
+}
+
+.p-custom{
+  padding-right: .7rem;
+  padding-left: .7rem;
+}
+
+.p-small {
+  padding: 1rem;
+}
+
+.side-p-small{
+  padding: .9rem 0;
+}
+
+.mr-4{
+  margin-right: 0!important;
+}
+
+.row-side-space{
+  padding: 0 1.8rem 0 1.8rem;
+}
+
+.space-2{
+  padding: 0 2rem;
+}
+
+.ptb{
+  padding: $pb-small;
+  @include mq("lg"){
+    padding: 0 5px 10px 8px;
+  }
+}
+
+.padding-right-20{
+  padding-right: 2rem;
+}
+
+.mt-side {
+  @include mq("xsm") {
+    padding-top: $pt-small;
+    margin-top: $mt-small;
+  }
+}
+
+.search-space {
+  @include mq("xsm") {
+    padding: $p-small;
+    margin-top: $mt-small;
+  }
+}
+
+.card-m{
+  margin: 0 0 .5rem 0;
+}

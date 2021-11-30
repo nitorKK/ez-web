@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+/* ================================================================================
+FileName: common.scss
+================================================================================ */
+
+// ==========================================================================
+// Foundation　サイト全体のデフォルトスタイルを管理
+// ==========================================================================
+
+@import "foundation/_reset";
+@import "foundation/_variable";
+@import "foundation/_mixin";
+@import "foundation/_base";
+@import "foundation/_style";
+
+// ==========================================================================
+// Layout　各ページを構成するサイト全体で共通したエリアを管理
+// ==========================================================================
+
+/* @import "layout/_footer";
+@import "layout/_header";
+@import "layout/_main";
+@import "layout/_breadcrumb"; */
+
+// ==========================================================================
+// Object　サイト全体で再利用できるパターンを持つモジュール
+// ==========================================================================
+
+// -----------------------------------------------------------------
+// Component
+// -----------------------------------------------------------------
+
+@import "object/component/_title-eng";
+@import "object/component/_contact";
+/* @import "object/component/_content";
+@import "object/component/_title";
+@import "object/component/_icon";
+@import "object/component/_button";
+@import "object/component/_input";
+@import "object/component/_card";
+@import "object/component/_video";
+@import "object/component/_swiper"
+@import "object/component/_tab";
+@import "object/component/_admin-list";
+@import "object/component/_radio";
+@import "object/component/_error-message"; */
+
+
+// -----------------------------------------------------------------
+// Project　componentと、他の要素によって構成される単位のモジュール
+// -----------------------------------------------------------------
+
+@import "object/project/_heading";
+@import "object/project/_topic";
+@import "object/project/_progressbar";
+@import "object/project/_list";
+@import "object/project/_gallery.scss";
+/* @import "object/project/_page";
+@import "object/project/_list";
+@import "object/project/_button";
+@import "object/project/_sidebar";
+@import "object/project/_table"; 
+@import "object/project/_accodion";
+@import "object/project/_topic";
+@import "object/project/_login";
+@import "object/project/_registration";
+@import "object/project/_dashboard";
+@import "object/project/_modal";
+ */
+// -----------------------------------------------------------------
+// Utility　componentとProjectのモディファイアで解決することができないスタイル
+// -----------------------------------------------------------------
+
+@import "object/utility/_utility"; 
+@import "object/utility/_margin";

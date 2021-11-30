@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+.has-background {
+  width: 100%;
+  background: var(--color-secondary);
+}
+
+.has-background-secondary{
+  background: var(--color-tertiary);
+}
+
+.has-field--background{
+  background: var(--color-tertiary);
+}
+
+.has-background-tertiary{
+  background: var(--color-quaternary);
+}

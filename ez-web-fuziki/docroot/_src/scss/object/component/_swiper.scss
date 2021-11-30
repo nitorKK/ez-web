@@ -1,0 +1,102 @@
+.c-swiper{
+  width: 100%;
+  max-width: 515px;
+}
+
+.c-swiper-parent {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+.swiper-container {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  top: 48%;
+  left: .3em;
+  width: 25px;
+  height: 25px;
+  color: var(--color-primary);
+  background-color: var(--color-quaternary);
+}
+
+.swiper-button-next {
+  position: absolute;
+  top: 48%;
+  right: .5em;
+  width: 25px;
+  height: 25px;
+  color: var(--color-primary);
+  background-color: var(--color-quaternary);
+}
+
+.swiper-button-prev::after {
+  position: relative;
+  position: relative;
+  display: block;
+  width: 6px;
+  height: 6px;
+  content: "";
+  border-top: solid 2px var(--color-primary);
+  border-right: solid 2px var(--color-primary);
+  transform: rotate(225deg);
+}
+
+.swiper-button-next::after {
+  position: relative;
+  position: relative;
+  display: block;
+  width: 6px;
+  height: 6px;
+  content: "";
+  border-top: solid 2px var(--color-primary);
+  border-right: solid 2px var(--color-primary);
+  transform: rotate(45deg);
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: $color-white;
+  background-color: var(--color-swiper);
+}
+
+.swiper-button-prev:hover::after{
+  position: relative;
+  position: relative;
+  display: block;
+  width: 6px;
+  height: 6px;
+  content: "";
+  border-top: solid 2px $color-white;
+  border-right: solid 2px $color-white;
+  transform: rotate(225deg);
+}
+
+.swiper-button-next:hover::after{
+  position: relative;
+  position: relative;
+  display: block;
+  width: 6px;
+  height: 6px;
+  content: "";
+  border-top: solid 2px $color-white;
+  border-right: solid 2px $color-white;
+  transform: rotate(45deg);
+}
+
+
+.swiper-slide {
+
+  img {
+    width: 300px;
+    height: auto;
+    /*     width: 100%;
+    height: 300px; */
+  }
+}

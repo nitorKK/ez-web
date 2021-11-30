@@ -1,0 +1,228 @@
+.use_icon {
+  display: block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.use_icon::placeholder {
+  color: var(--color-quaternary);
+}
+
+.use_icon {
+  display: block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.use_icon::placeholder {
+  color: var(--color-quaternary);
+}
+
+*:focus {
+  box-shadow: none !important;
+}
+
+.form-control {
+  @include font-size(18);
+}
+
+.c-keyword__list {
+  padding-bottom: 1rem;
+
+  > li {
+    padding: .7rem 0;
+    @include mq("lg") {
+      padding: initial;
+    }
+  }
+
+  label {
+    position: relative;
+    display: block;
+    margin-bottom: 0;
+    cursor: pointer;
+
+    > span {
+      margin-left: 25px;
+      color: var(--text-black);
+      vertical-align: middle;
+      @include font-size(14);
+    }
+
+    .label-indent {
+      display: inline-block;
+      padding-left: .1rem;
+      text-indent: -.1rem;
+    }
+  }
+
+  input[ type = "checkbox" ] {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  input[ type = "checkbox" ] + i {
+    position: absolute;
+    top: 5px;
+    z-index: 1;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border: 1px solid var(--color-quaternary);
+    border-radius: 0;
+  }
+
+  input[ type = "checkbox" ]:checked + i::after {
+    position: absolute;
+    left: 1px;
+    z-index: 2;
+    display: block;
+    font-family: "Font Awesome 5 Free";
+    font-size: 10px;
+    font-weight: 900;
+    color: $color-white;
+    content: "\f00c";
+  }
+
+  input[ type = "checkbox" ]:checked + i {
+    background-color: var(--color-primary);
+    border-color: transparent;
+  }
+}
+
+
+.c-policy {
+  width: 100%;
+  max-width: 215px;
+  padding-top: 4rem;
+  margin: auto;
+  font-weight: bold;
+
+  label {
+    position: relative;
+    display: block;
+    margin-bottom: 0;
+    cursor: pointer;
+
+    > span {
+      margin-left: 25px;
+      color: var(--text-black);
+      vertical-align: middle;
+      @include font-size(14);
+    }
+
+    .label-indent {
+      display: inline-block;
+      padding-left: .1rem;
+      text-indent: -.1rem;
+    }
+  }
+
+  input[ type = "checkbox" ] {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  input[ type = "checkbox" ] + i {
+    position: absolute;
+    top: 5px;
+    z-index: 1;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border: 1px solid var(--color-grey);
+    border-radius: 0;
+  }
+
+  input[ type = "checkbox" ]:checked + i::after {
+    position: absolute;
+    left: 1px;
+    z-index: 2;
+    display: block;
+    font-family: "Font Awesome 5 Free";
+    font-size: 10px;
+    font-weight: 900;
+    color: var(--text-black);
+    content: "\f00c";
+  }
+}
+
+//checkbox
+
+.c-checkbox{
+  width: 100%;
+  max-width: 260px;
+  margin: auto;
+  font-weight: bold;
+
+  label {
+    position: relative;
+    display: block;
+    margin-bottom: 0;
+    cursor: pointer;
+
+    > span {
+      margin-right: 35px;
+      color: var(--text-black);
+      vertical-align: middle;
+      @include font-size(16);
+    }
+
+    .label-indent {
+      display: inline-block;
+      padding-left: .1rem;
+      text-indent: -.1rem;
+    }
+  }
+
+  input[ type = "checkbox" ] {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  input[ type = "checkbox" ] + i {
+    position: absolute;
+    top: 4px;
+    z-index: 1;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: $color-white;
+    border: 1px solid var(--color-grey);
+    border-radius: 0;
+  }
+
+  input[ type = "checkbox" ]:checked + i::after {
+    position: absolute;
+    left: 1px;
+    z-index: 2;
+    display: block;
+    font-family: "Font Awesome 5 Free";
+    font-size: 10px;
+    font-weight: 900;
+    color: var(--text-black);
+    content: "\f00c";
+  }
+
+  input[ type = "checkbox" ]:checked + i {
+    /*     background-color:var(--color-grey); */
+    /*    border-color: transparent; */
+    /*    color:  var(--color-grey);; */
+  }
+}

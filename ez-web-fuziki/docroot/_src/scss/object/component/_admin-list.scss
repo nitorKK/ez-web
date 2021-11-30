@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+.c-list-container{
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--color-border);
+  @include border-radius(.5);
+
+  &:last-of-type {
+    margin-bottom: 7rem;
+  }
+
+  .p-new-registration__iteme--1,.p-new-registration__iteme--3{
+    align-items: baseline;
+    max-width: initial;
+    padding-left: 4.6rem;
+    margin: 0;
+  }
+
+  .p-new-registration__iteme--3{
+
+    .form-control{
+      height: 4.8rem;
+    }
+  }
+
+  .custom-radio .custom-control-input:checked ~ .custom-control-label::after{
+    /* padding: 15px; */
+    width: 30.9px;
+    height: 32px;
+    background-position: center;
+    /*     @include mq("lg") {
+    padding: 17px;
+    } */
+  }
+
+  .custom-control-label::after{
+    top: calc(70% - 20px);
+    left: -3.01rem;
+  }
+
+  .pradio-layout{
+    margin-left: 1rem;
+  }
+}
+
+.c-list-detail{
+  padding: 1.1rem 2.0rem 0;
+  border-radius: .5rem;
+}
+
+.list-btns-group{
+  gap: 12px;
+  padding-left: 13rem;
+
+  .btns-group{
+    width: 680px;
+  }
+}

@@ -1,0 +1,309 @@
+@charset "UTF-8";
+
+//step
+
+/* p-progressbar */
+
+.progressbar,
+.progressbar-2,
+.progressbar-3,
+.progressbar-4,
+.progressbar-5 {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  @include mq("lg") {
+    max-width: 900px;
+  }
+  @include mq("xsm") {
+    max-width: 400px;
+  }
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 6rem;
+  counter-reset: step;
+}
+
+.progressbar::before,
+.progress {
+  position: absolute;
+  top: 50%;
+  /*   z-index: -1; */
+  @include mq("lg") {
+    width: 79%;
+  }
+  @include mq("xsm") {
+    width: 79%;
+  }
+  height: 15px;
+  content: "";
+  background-color: var(--color-danger);
+  transform: translateY(-50%);
+}
+
+.progressbar::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  content: "";
+  border-style: solid;
+  @include mq("lg") {
+    top: 39%;
+    right: 17rem;
+    margin-top: -6px;
+    border-color: transparent transparent transparent var(--color-danger);
+    border-width: 21px 0 20px 21px;
+  }
+  @include mq("xsm") {
+    top: 32%;
+    right: 6.9rem;
+    margin-top: -6px;
+    border-color: transparent transparent transparent var(--color-danger);
+    border-width: 18px 0 16px 15px;
+  }
+  @include mq("md") {
+    top: 32%;
+    right: 7rem;
+    margin-top: -6px;
+    border-color: transparent transparent transparent var(--color-danger);
+    border-width: 18px 0 16px 15px;
+  }
+}
+
+.progressbar-2::before,
+.progress {
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+  width: 100%;
+  height: 4px;
+  content: "";
+  background-color: var(--color-danger);
+  transform: translateY(-50%);
+}
+
+.progressbar-2::after {
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+  width: 30%;
+  height: 4px;
+  content: "";
+  content: " ";
+  background-color: var(--color-danger);
+  background-color: var(--color-primary);
+  transform: translateY(-50%);
+}
+
+.progressbar-3::before,
+.progress {
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+  width: 100%;
+  height: 4px;
+  content: "";
+  background-color: var(--color-danger);
+  transform: translateY(-50%);
+}
+
+.progressbar-3::after {
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+  width: 50%;
+  height: 4px;
+  content: "";
+  content: " ";
+  background-color: var(--color-danger);
+  background-color: var(--color-primary);
+  transform: translateY(-50%);
+}
+
+.progressbar-4::before,
+.progress {
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+  width: 100%;
+  height: 4px;
+  content: "";
+  background-color: var(--color-danger);
+  transform: translateY(-50%);
+}
+
+.progressbar-4::after {
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+  width: 70%;
+  height: 4px;
+  content: "";
+  content: " ";
+  background-color: var(--color-danger);
+  background-color: var(--color-primary);
+  transform: translateY(-50%);
+}
+
+.progressbar-5::before,
+.progress {
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+  width: 100%;
+  height: 4px;
+  content: "";
+  background-color: var(--color-primary);
+  transform: translateY(-50%);
+}
+
+.progressbar-5::after {
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+  width: 50%;
+  height: 4px;
+  content: "";
+  content: " ";
+  background-color: var(--color-danger);
+  background-color: var(--color-primary);
+  transform: translateY(-50%);
+}
+
+.progress {
+  width: 0%;
+  background-color: var(--color-primary);
+  transition: .3s;
+}
+
+.progress-step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include mq("lg") {
+    width: 14rem;
+    height: 13rem;
+  }
+  @include mq("xsm") {
+    width: 7rem;
+    height: 7rem;
+  }
+  padding: 1rem;
+  color: $color-white;
+  background-color: var(--color-danger);
+  border-radius: 20%;
+}
+
+/* .progress-step::before {
+  font-weight: bold;
+  color: $color-white;
+  content: counter(step);
+  counter-increment: step;
+} */
+
+.progress-step::after {
+  position: absolute;
+  /*   top: calc(100% + .5rem); */
+  z-index: 2;
+  @include mq("lg") {
+    @include font-size(16);
+  }
+  @include mq("xsm") {
+    @include font-size(14);
+  }
+  font-weight: bold;
+  text-align: center;
+  content: attr(data-title);
+}
+
+.title--1::after {
+  @include mq("lg") {
+    width: 12%;
+  }
+  @include mq("xsm") {
+    width: 10%;
+  }
+  text-align: center;
+}
+
+.title--2 {
+
+  &::after {
+    width: 10%;
+    text-align: center;
+  }
+
+  &[ progressbar-deta = "p-progressbar2" ] {
+    background-color: var(--color-primary);
+
+    &::after {
+      color: var(--color-primary);
+    }
+  }
+}
+
+.title--3 {
+
+  &::after {
+    @include mq("lg") {
+      width: 12%;
+    }
+    @include mq("xsm") {
+      width: 10%;
+    }
+    text-align: center;
+  }
+
+  &[ progressbar-deta = "p-progressbar3" ] {
+    background-color: var(--color-primary);
+
+    &::after {
+      color: var(--color-primary);
+    }
+  }
+}
+
+.title--4::after {
+  width: 16%;
+  text-align: center;
+}
+
+.title--4 {
+  /*   ::after {
+    width: 22%;
+    text-align: center;
+  } */
+
+  &[ progressbar-deta = "p-progressbar4" ] {
+    background-color: var(--color-primary);
+
+    &::after {
+      color: var(--color-primary);
+    }
+  }
+}
+
+.title--5::after {
+  width: 15%;
+  text-align: center;
+}
+
+.progress-step-active {
+  color: var(--color-primary);
+  background-color: var(--color-primary);
+
+  &::after {
+    color: var(--color-primary);
+  }
+}
+
+.title--5 {
+
+  &[ progressbar-deta = "p-progressbar5" ] {
+    background-color: var(--color-primary);
+
+    &::after {
+      color: var(--color-primary);
+    }
+  }
+}

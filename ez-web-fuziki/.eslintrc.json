@@ -1,0 +1,21 @@
+{
+  "extends": ["eslint:recommended"],
+  "plugins": ["jquery"],
+  "parserOptions": {},
+  "env": {
+    "browser": true,
+    "jquery": true,
+    "node": true
+  },
+  "globals": {},
+  "rules": {
+    "no-console": 2
+  },
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  }
+}

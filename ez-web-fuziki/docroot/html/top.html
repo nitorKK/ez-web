@@ -23,7 +23,18 @@
     <link rel="stylesheet" href="css/bootstrap4-print.css">
     <link rel="stylesheet" href="css/phosphor.css">
     <link rel="stylesheet" href="css/slick.css">
+    <!--<link rel="stylesheet" href="css/slick-theme.css">-->
+    <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/noto-sans.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="default-header">
@@ -31,12 +42,16 @@
             <div class="nav-container">
                 <a class="navbar-brand" href="/">
                     <h1 class="logo-body">
-                        <img src="/images/logo.png" alt="注文住宅,土地,マンション,リノベーション,不動産,リフォーム,修繕工事,フジキ建設,埼玉県草加市">
+                        <img src="/images/logo.png" alt="注文住宅,土地,マンション,リノベーション,不動産,リフォーム,修繕工事,フジキ建設,埼玉県草加市"><span class="logo-text logo-text-heading">フジキ建設</span>
                     </h1>
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="ph-list"></span>
-                </button>
+                <nav class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <div id="humberger">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </nav>
                 <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="cur nav-item"><a href="/" class="current">Home</a></li>
@@ -45,13 +60,17 @@
                         <li class="cur nav-item"><a href="/company.html">会社概要</a></li>
                     </ul>
                     <div class="header-tel -bold">
-                        <div class="header-tel -bold">
+                        <div class="header-tel -bold
+                
+                ">
                             <div class="btn-body">
-                                <span class="tel-text"><i class="fas fa-phone"></i>048-946-7275</span>
+                                <span class="tel-text" data-action="call"><i class="fas fa-phone"></i>048-946-7275</span>
                             </div>
                         </div>
                         <div class="header-mail">
-                            <div class="btn-body -bold"><i class="fas fa-envelope"></i>メールでのお問い合わせ</div>
+                            <a class="mail" href="mailto:info@fuziki.co.jp">
+                                <div class="btn-body -bold"><i class="fas fa-envelope"></i>メールでのお問い合わせ</div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -59,20 +78,10 @@
         </nav>
     </header>
     <main>
-        <!--<section class="home-banner-area home-banner-area relative" id="home" data-parallax="scroll" data-position="top" data-image-src="/images/header-bg.jpg" alt="header-bg">
-		<div class="overlay-bg"></div>
-		<div class="container">
-			<div class="row fullscreen">
-				<div class="banner-content col-lg-12">
-					<h2>
-						大東空調設備は快適と笑顔をお届けいたします
-					</h2>
-				</div>
-			</div>
-		</div>
-	</section>-->
         <section class="section-main-visual">
-            <img src="/images/visual.jpg" alt="メインビジュアル">
+            <img class="ie-visual" src="/images/visual.jpg" alt="メイン画像">
+            <img class="modern" srcset="/images/sp-visual.jpg 400w,
+             /images/visual.jpg 1024w" sizes="(max-width: 767px) 80vw, 100vw">
         </section>
         <section class="section-body section-gap-top">
             <div class="container">
@@ -84,9 +93,9 @@
                         </div>
                     </div>
                     <div class="section-text--body text line-height">
-                        <p class="text">フジキ建設は平成4年に設立以来、首都圏を中心にリフォーム、新築工事、不動産再生事業と住宅に関わるあらゆるサービスを手掛けてきました。 住宅に関するあらゆる『困った』はフジキ建設までご相談ください。</p>
+                        <p class="text">フジキ建設は平成4年に設立以来、首都圏を中心にリフォーム、新築工事、不動産再生事業と住宅に関わるあらゆるサービスを手掛けてきました。 住宅に関するあらゆる<br>『困った』はフジキ建設までご相談ください。</p>
                         <div class="section-title section-title-x2 text-center mt-large">
-                            <a href="/service.html" class="pt-large primary-btn u-has-display-block">業務内容を見る </a>
+                            <a href="/service.html" class="primary-btn display-flex">業務内容を見る </a>
                         </div>
                     </div>
                 </div>
@@ -132,46 +141,30 @@
                 <div class="row d-flex justify-content-center">
                     <div class="col-lg-8">
                         <div class="section-title text-center">
-                            <h3 class="text-transform color-white">recommended property</h3>
-                            <span class="head-border -bold color-white">物件情報</span>
+                            <h3 class="color-white">Property Information For sale</h3>
+                            <span class="head-border -bold color-white">販売中物件情報</span>
                         </div>
                     </div>
                 </div>
-                <div data-aos="fade-up" class="row gallery-item mt-large mb-large">
-                    <div class="col-md-4">
-                        <div class="col-item top-gallery-image">
-                            <figure>
-                                <a href="/about.html#about-link1">
-                                    <div class="col-pic set-bg" data-setbg="/images/top-item.jpg" alt="物件" style="background-image: url(&quot;/images/top-item.jpg&quot;);">
+                <div data-aos="fade-up" data-aos-duration="600" class="row gallery-item mt-large mb-large"> <?php $boxes = $this->requestAction(array('controller'=>'property','action'=>'widget','conditions'=>array('CatalogBox.on_top_page'=>'Y'),'with_category'=>1,'with_index_page'=>1,'limit'=>3));
+                    foreach($boxes as $box):extract($box['CatalogBox'],EXTR_PREFIX_ALL,'tbl');extract($box['CatalogCategory'],EXTR_PREFIX_ALL,'category'); ?> <div class="col-md-4">
+                        <div class="col-item top-gallery-image"> <?php if(!empty($tbl_image1)): ?> <figure>
+                                <a href="property/index/<?php echo $category_id; ?>/page:<?php echo $tbl_index_page; ?>#property-<?php echo $tbl_id; ?>">
+                                    <div class="col-pic set-bg" data-setbg="<?php echo $this->element('media', array('var'=>array('id'=>$tbl_image1,'width'=>340,'return'=>true)));?>" alt="<?php echo $tbl_image1_alt;?>" style="background-image: url(&quot;<?php echo $this->element('media', array('var'=>array('id'=>$tbl_image1,'width'=>340,'return'=>true)));?>&quot;);">
                                     </div>
                                 </a>
-                            </figure>
-                            <span class="col-pic-text">item</span>
+                            </figure> <?php endif; ?> <span class="col-pic-text"><?php echo $tbl_title; ?></span>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="col-item top-gallery-image">
-                            <a href="/about.html#about-link2">
-                                <div class="col-pic set-bg" data-setbg="/images/top-item.jpg" alt="物件" style="background-image: url(&quot;/images/top-item.jpg&quot;);">
-                                </div>
-                            </a>
-                            <span class="col-pic-text">item</span>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="col-item top-gallery-image">
-                            <a href="/about.html#about-link3">
-                                <div class="col-pic set-bg" data-setbg="/images/top-item.jpg" alt="物件" style="background-image: url(&quot;/images/top-item.jpg&quot;);">
-                                </div>
-                            </a>
-                            <span class="col-pic-text">item</span>
-                        </div>
-                    </div>
-                </div>
+                    </div> <?php
+                    //使った変数を初期化
+                    foreach($box['CatalogBox'] as $key=>$data){
+                      ${'tbl_'.$key} = null;
+                    }
+                    ?> <?php endforeach; ?> </div>
                 <div class="row d-flex justify-content-center">
-                    <div class="col-lg-8">
+                    <div class="btn-body">
                         <div class="section-title section-title-x2 text-center">
-                            <a href="/property.html" class="primary-btn">物件情報を見る</a>
+                            <a href="/property.html" class="primary-btn display-flex">全ての物件情報を見る</a>
                         </div>
                     </div>
                 </div>
@@ -183,9 +176,9 @@
                     <div class="section-title text-center">
                         <h3 class="text-transform">service area</h3>
                     </div>
-                    <div class="row align-items-stretch justify-content-spaceevenly mt-large">
+                    <div class="row align-items-stretch justify-content-spaceevenly mt-medium">
                         <div class="section-title text-left col-lg-5 col-md-12 about-left">
-                            <div class="section-title-50x text-left"> フジキ建設は埼玉県、東京都、千葉県を中心に事業を手掛けております。近郊エリアでリフォーム工事、新築工事、不動産媒介のご相談がございましたら、お気軽にフジキ建設までご連絡ください。</div>
+                            <div class="section-title-50x text-left -bold font-size18"> フジキ建設は埼玉県、東京都、千葉県を中心に事業を手掛けております。近郊エリアでリフォーム工事、新築工事、不動産媒介のご相談がございましたら、お気軽にフジキ建設までご連絡ください。</div>
                         </div>
                         <div class="col-lg-5 col-md-12 about-right">
                             <div class="section-title text-left">
@@ -209,8 +202,8 @@
                                 <div class="btn-left -bold">
                                     <div class="btn-title">お電話でのお問い合わせ</div>
                                     <div class="btn-body">
-                                        <span class="tel-text"><i class="fas fa-phone"></i>048-946-7275</span>
-                                        <span class="u-has-display-block line-height-2">お問い合わせ時間：平日9：00～17：00<br>定休日：土曜・日曜･祝祭日</span>
+                                        <span class="tel-text" data-action="call"><i class="fas fa-phone"></i>048-946-7275</span>
+                                        <span class="u-has-display-block line-height-2">お問い合わせ時間：平日9：00～17：00<br>定休日：土曜・日曜・祝祭日</span>
                                     </div>
                                 </div>
                             </div>
@@ -234,14 +227,14 @@
             <div class="footer-body">
                 <div class="row">
                     <div class="col-lg-9  col-md-6">
-                        <h3 class="footer-logo"><img src="/images/logo.png" alt="埼玉県草加市、リフォーム、新築、不動産、フジキ建設"></h3>
+                        <h3 class="footer-logo"><img src="/images/logo.png" alt="注文住宅,土地,マンション,リノベーション,不動産,リフォーム,修繕工事,フジキ建設,埼玉県草加市"><span class="logo-text logo-text-heading">フジキ建設</span></h3>
                         <div class="row align-items-center">
                             <div class="col-lg-5 mt-small">
                                 <p class="font-14p">&#12306;340-0056&nbsp;&nbsp;埼玉県草加市新栄3-13-2</p>
-                                <p class="font-14p">TEL：048-946-7275&nbsp;&nbsp;FAX：048-946-7275</p>
+                                <p class="font-14p"><span data-action="call">TEL：048-946-7275</span>&nbsp;&nbsp;FAX：048-946-7276</p>
                             </div>
                             <div class="col-lg-6 mb-60-sub">
-                                <a href="https://goo.gl/maps/fVcxyTth2VdQv6yAA" class="genric-btn primary e-large -bold">Googlmapで見る</a>
+                                <a href="https://goo.gl/maps/fVcxyTth2VdQv6yAA" target="_blank" class="genric-btn primary e-large -bold">Googlmapで見る</a>
                             </div>
                         </div>
                     </div>
@@ -249,8 +242,8 @@
                         <ul class="footer-info -bold">
                             <li><a href="/">HOME</a></li>
                             <li><a href="/service.html">事業内容</a></li>
-                            <li><a href="/property.html">会社概要</a></li>
-                            <li><a href="/company.html">お問い合わせ</a></li>
+                            <li><a href="/property.html">不動産情報</a></li>
+                            <li><a href="/company.html">会社概要</a></li>
                         </ul>
                     </div>
                 </div>
@@ -273,5 +266,12 @@
     <script src="js/slick.min.js"></script>
     <script src="js/ofi.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/tel-3.1.js"></script>
+    <script>
+        objectFitImages('.photo-ofi img');
+    </script>
+    <script>
+        window.MSInputMethodContext && document.documentMode && document.write('<script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\/script>');
+    </script>
 </body>
 </html>

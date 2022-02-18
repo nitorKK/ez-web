@@ -1,18 +1,7 @@
-<!--<section class="home-banner-area home-banner-area relative" id="home" data-parallax="scroll" data-position="top" data-image-src="/images/header-bg.jpg" alt="header-bg">
-		<div class="overlay-bg"></div>
-		<div class="container">
-			<div class="row fullscreen">
-				<div class="banner-content col-lg-12">
-					<h2>
-						大東空調設備は快適と笑顔をお届けいたします
-					</h2>
-				</div>
-			</div>
-		</div>
-	</section>-->
-
-  	<section class="section-main-visual">
-    <img src="/images/visual.jpg" alt="メインビジュアル">
+ 	<section class="section-main-visual">
+            <img class="ie-visual" src="/images/visual.jpg" alt="メイン画像">
+            <img class="modern" srcset="/images/sp-visual.jpg 400w,
+             /images/visual.jpg 1024w" sizes="(max-width: 767px) 80vw, 100vw">
       </section>
 
 	<section class="section-body section-gap-top">
@@ -26,9 +15,9 @@
 				</div>
 				<div class="section-text--body text line-height">
 					<p class="text">フジキ建設は平成4年に設立以来、首都圏を中心にリフォーム、新築工事、不動産再生事業と住宅に関わるあらゆるサービスを手掛けてきました。
-                    住宅に関するあらゆる『困った』はフジキ建設までご相談ください。</p>
+                    住宅に関するあらゆる<br>『困った』はフジキ建設までご相談ください。</p>
                 <div class="section-title section-title-x2 text-center mt-large">
-                <a href="/service.html" class="pt-large primary-btn u-has-display-block">業務内容を見る </a>
+                <a href="/service.html" class="primary-btn display-flex">業務内容を見る </a>
                 </div>
 				</div>
 			</div>
@@ -58,55 +47,49 @@
 		</div>
 	</section>
 
-
-	<section class="section-body3 section-gap">
-		<div class="container">
-			<div class="row d-flex justify-content-center">
-				<div class="col-lg-8">
-					<div class="section-title text-center">
-						<h3 class="text-transform color-white">recommended property</h3>
-						<span class="head-border -bold color-white">物件情報</span>
-					</div>
-				</div>
-			</div>
-
-			<div data-aos="fade-up" class="row gallery-item mt-large mb-large">
-				<div class="col-md-4">
-					<div class="col-item top-gallery-image">
-						<figure>
-						<a href="/about.html#about-link1"><div class="col-pic set-bg" data-setbg="/images/top-item.jpg" alt="物件"
-							style="background-image: url(&quot;/images/top-item.jpg&quot;);">
-						</div></a>
-						</figure>
-						<span class="col-pic-text">item</span>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="col-item top-gallery-image">
-						<a href="/about.html#about-link2"><div class="col-pic set-bg" data-setbg="/images/top-item.jpg" alt="物件"
-							style="background-image: url(&quot;/images/top-item.jpg&quot;);">
-						</div></a>
-						<span class="col-pic-text">item</span>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="col-item top-gallery-image">
-						<a href="/about.html#about-link3"><div class="col-pic set-bg" data-setbg="/images/top-item.jpg" alt="物件"
-							style="background-image: url(&quot;/images/top-item.jpg&quot;);">
-						</div></a>
-						<span class="col-pic-text">item</span>
-					</div>
-				</div>
-			</div>
-			<div class="row d-flex justify-content-center">
-				<div class="col-lg-8">
-					<div class="section-title section-title-x2 text-center">
-						<a href="/property.html" class="primary-btn">物件情報を見る</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+        <section class="section-body3 section-gap">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="section-title text-center">
+                            <h3 class="color-white">Property Information For sale</h3>
+                            <span class="head-border -bold color-white">販売中物件情報</span>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="600" class="row gallery-item mt-large mb-large">
+                    <?php $boxes = $this->requestAction(array('controller'=>'property','action'=>'widget','conditions'=>array('CatalogBox.on_top_page'=>'Y'),'with_category'=>1,'with_index_page'=>1,'limit'=>3));
+                    foreach($boxes as $box):extract($box['CatalogBox'],EXTR_PREFIX_ALL,'tbl');extract($box['CatalogCategory'],EXTR_PREFIX_ALL,'category'); ?>
+                    <div class="col-md-4">
+                        <div class="col-item top-gallery-image">
+                            <?php if(!empty($tbl_image1)): ?>
+                            <figure>
+                                <a href="property/index/<?php echo $category_id; ?>/page:<?php echo $tbl_index_page; ?>#property-<?php echo $tbl_id; ?>">
+                                    <div class="col-pic set-bg" data-setbg="<?php echo $this->element('media', array('var'=>array('id'=>$tbl_image1,'width'=>340,'return'=>true)));?>" alt="<?php echo $tbl_image1_alt;?>" style="background-image: url(&quot;<?php echo $this->element('media', array('var'=>array('id'=>$tbl_image1,'width'=>340,'return'=>true)));?>&quot;);">
+                                    </div>
+                                </a>
+                            </figure>
+                            <?php endif; ?>
+                            <span class="col-pic-text"><?php echo $tbl_title; ?></span>
+                        </div>
+                    </div>
+                    <?php
+                    //使った変数を初期化
+                    foreach($box['CatalogBox'] as $key=>$data){
+                      ${'tbl_'.$key} = null;
+                    }
+                    ?>
+                    <?php endforeach; ?>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="btn-body">
+                        <div class="section-title section-title-x2 text-center">
+                            <a href="/property.html" class="primary-btn display-flex">全ての物件情報を見る</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 	<section class="service-link spad">
 			<div class="service-link-img">
@@ -114,9 +97,9 @@
 				<div class="section-title text-center">
                             <h3 class="text-transform">service area</h3>
                         </div>
-					<div class="row align-items-stretch justify-content-spaceevenly mt-large">
+					<div class="row align-items-stretch justify-content-spaceevenly mt-medium">
 						<div class="section-title text-left col-lg-5 col-md-12 about-left">
-							<div class="section-title-50x text-left">
+							<div class="section-title-50x text-left -bold font-size18">
 							フジキ建設は埼玉県、東京都、千葉県を中心に事業を手掛けております。近郊エリアでリフォーム工事、新築工事、不動産媒介のご相談がございましたら、お気軽にフジキ建設までご連絡ください。</div>
 						</div>
 						<div class="col-lg-5 col-md-12 about-right">
@@ -143,8 +126,8 @@
                             <div class="btn-left -bold">
 							<div class="btn-title">お電話でのお問い合わせ</div>
 							<div class="btn-body">
-							<span class="tel-text"><i class="fas fa-phone"></i>048-946-7275</span>
-							<span class="u-has-display-block line-height-2">お問い合わせ時間：平日9：00～17：00<br>定休日：土曜・日曜･祝祭日</span>
+							<span class="tel-text" data-action="call"><i class="fas fa-phone"></i>048-946-7275</span>
+							<span class="u-has-display-block line-height-2">お問い合わせ時間：平日9：00～17：00<br>定休日：土曜・日曜・祝祭日</span>
 							</div>
 							</div>
                         </div>

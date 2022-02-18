@@ -33,8 +33,8 @@ $breakpoint-lg: 1000px !default;
 
 // mixin    @include mq("md") {}
 $breakpoints: (
-  "sp":"screen and (max-width: 370px)",
-  "xsm":"screen and (min-width: 320px)",
+  "sp":"screen and (max-width: 320px)",
+  "xsm":"screen and (min-width: 321px)",
   "sm":"screen and (min-width: 576px)",
   "md":"screen and (min-width: 768px)",
   "lg":"screen and (min-width: 1000px)",

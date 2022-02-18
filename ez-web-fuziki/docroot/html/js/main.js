@@ -174,3 +174,16 @@ $(document).ready(function () {
 
 });
 
+
+
+
+$(function() {
+  function toggleNav() {
+    var hamburger = document.getElementById("humberger");
+    hamburger.addEventListener("click", function() {
+      hamburger.classList.toggle("active");
+    });
+  }
+  toggleNav();
+});
+

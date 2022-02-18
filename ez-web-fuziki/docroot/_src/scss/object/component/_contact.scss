@@ -2,11 +2,14 @@
 
 .btn-left {
   height: 100%;
+  @include mq("sp") {
+    padding: 5% 0;
+  }
   @include mq("xsm") {
-    padding: 10% 0;
+    padding: 5% 0;
   }
   @include mq("lg") {
-    height: 250px;
+    height: 215px;
   }
   color: $color-white;
   background: var(--color-primary);
@@ -24,15 +27,18 @@
     margin: auto;
     text-align: center;
 
-    >.tel-text{
+    .tel-text{
+      @include mq("sp") {
+        @include font-size(25);
+      }
+      @include mq("md") {
+        @include font-size(45);
+      }
       @include mq("xsm") {
         @include font-size(35);
       }
       padding-right: 4rem;
       font-weight: bold;
-      @include mq("md") {
-        @include font-size(45);
-      }
     }
   }
 
@@ -49,8 +55,17 @@
 }
 
 .btn-right {
+  @include mq("sp") {
+    @include font-size(18);
+  }
+  @include mq("lg") {
+    height: 215px;
+    margin-top: initial;
+  }
   @include mq("xsm") {
+    height: auto;
     padding: 5% 0;
+    margin-top: 2rem;
     @include font-size(24);
   }
   display: grid;
@@ -69,8 +84,22 @@
 }
 
 .header-tel{
-  margin: 1rem;
-  @include mq("lg") {
+  @include mq("md") {
+    color: var(--text-black);
+    background: none;
+  }
+
+  @include mq("xsm") {
+
+    color: $color-white;
+    background: var(--color-primary);
+    @include font-size(26);
+  }
+
+  @include mq("sp") {
+
+    color: $color-white;
+    background: var(--color-primary);
     @include font-size(26);
   }
 
@@ -80,12 +109,22 @@
 }
 
 .header-mail{
-  @include mq("xsm") {
-    @include font-size(16);
+  @include mq("sp") {
     padding: 3%;
+    margin-bottom: 1rem;
+    @include font-size(19);
+  }
+
+  @include mq("xsm") {
+    @include font-size(19);
   }
   @include mq("md") {
-    @include font-size(16);
+    padding: 3%;
+    margin-bottom: 1rem;
+    @include font-size(18);
+  }
+  @include mq("lg") {
+    @include font-size(15.5);
     padding: 1% 1.5%;
   }
 
@@ -96,3 +135,13 @@
     padding: 1rem;
   }
 }
+
+
+/* .section-main-visual{
+  height:200px;
+  background: url(/images/sp-visual.jpg) no-repeat;
+  background-size: contain;
+} */
+
+
+

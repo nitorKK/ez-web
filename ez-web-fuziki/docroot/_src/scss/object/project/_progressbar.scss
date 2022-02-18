@@ -13,11 +13,14 @@
   display: flex;
   justify-content: space-between;
   @include mq("lg") {
-    max-width: 900px;
+    max-width: 1000px;
   }
-  @include mq("xsm") {
+  @include mq("md") {
+    max-width: 800px;
+  }
+  /*   @include mq("xsm") {
     max-width: 400px;
-  }
+  } */
   margin: auto;
   margin-top: 3rem;
   margin-bottom: 6rem;
@@ -28,46 +31,75 @@
 .progress {
   position: absolute;
   top: 50%;
+
   /*   z-index: -1; */
   @include mq("lg") {
+    width: 100%;
+  }
+  @include mq("md") {
+    width: 100%;
+  }
+  /*   @include mq("md") {
     width: 79%;
   }
+  @include mq("sm") {
+    width: 79%;
+  } */
   @include mq("xsm") {
-    width: 79%;
+    width: 100%;
   }
-  height: 15px;
+  @include mq("sp") {
+    width: 100%;
+  }
+  height: 30px;
   content: "";
-  background-color: var(--color-danger);
+  background-color: #ffc000;
   transform: translateY(-50%);
 }
 
+
 .progressbar::after {
-  position: absolute;
+  /*   position: absolute;
   width: 0;
   height: 0;
   content: "";
   border-style: solid;
   @include mq("lg") {
-    top: 39%;
-    right: 17rem;
+    top: 30%;
+    right: 14.8rem;
     margin-top: -6px;
-    border-color: transparent transparent transparent var(--color-danger);
-    border-width: 21px 0 20px 21px;
-  }
-  @include mq("xsm") {
-    top: 32%;
-    right: 6.9rem;
-    margin-top: -6px;
-    border-color: transparent transparent transparent var(--color-danger);
-    border-width: 18px 0 16px 15px;
+    border-color: transparent transparent transparent #ffc000;
+    border-width: 30px 0 30px 30px;
   }
   @include mq("md") {
-    top: 32%;
+    top: 31%;
+    right: 19%;
+    margin-top: -6px;
+    border-color: transparent transparent transparent #ffc000;
+    border-width: 30px 0 30px 30px;
+  } */
+  /*   @include mq("md") {
+    top: 31%;
+    right:15rem;
+    margin-top: -6px;
+    border-color: transparent transparent transparent #ffc000;
+    border-width: 30px 0 30px 30px;
+  }
+  @include mq("sm") {
+    top: 30%;
     right: 7rem;
     margin-top: -6px;
-    border-color: transparent transparent transparent var(--color-danger);
-    border-width: 18px 0 16px 15px;
-  }
+    border-color: transparent transparent transparent #ffc000;
+    border-width: 20px 0 20px 20px;
+  } */
+
+  /*   @include mq("xsm") {
+    top: 29%;
+    right: 19%;
+    margin-top: -6px;
+    border-color: transparent transparent transparent #ffc000;
+    border-width: 20px 0 20px 20px;
+  } */
 }
 
 .progressbar-2::before,
@@ -177,21 +209,35 @@
 }
 
 .progress-step {
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  @include mq("lg") {
-    width: 14rem;
-    height: 13rem;
-  }
-  @include mq("xsm") {
-    width: 7rem;
-    height: 7rem;
-  }
   padding: 1rem;
   color: $color-white;
   background-color: var(--color-danger);
   border-radius: 20%;
+  @include mq("lg") {
+    width: 16rem;
+    height: 13rem;
+  }
+  @include mq("md") {
+    width: 14rem;
+    height: 14rem;
+  }
+  @include mq("xsm") {
+    width: 8rem;
+    height: 9rem;
+  }
+  @include mq("sp") {
+    width: 6.5rem;
+    height: 7rem;
+    @include font-size(10);
+  }
+}
+
+.title--1,.title--2,.title--3{
+  background-color: var(--color-primary); 
 }
 
 /* .progress-step::before {
@@ -211,25 +257,34 @@
   @include mq("xsm") {
     @include font-size(14);
   }
+  @include mq("sp") {
+    @include font-size(12);
+  }
   font-weight: bold;
   text-align: center;
   content: attr(data-title);
 }
 
 .title--1::after {
+  padding-bottom: 4rem;
   @include mq("lg") {
     width: 12%;
+
   }
-  @include mq("xsm") {
+  @include mq("md") {
+    width: 12%;
+  }
+  /*   @include mq("xsm") {
     width: 10%;
-  }
+  } */
   text-align: center;
 }
 
 .title--2 {
 
   &::after {
-    width: 10%;
+    padding-bottom: 4rem;
+    /*     width: 10%; */
     text-align: center;
   }
 
@@ -245,12 +300,16 @@
 .title--3 {
 
   &::after {
+    padding-bottom: 4rem;
     @include mq("lg") {
+      width: 12%; 
+    }
+    @include mq("md") {
       width: 12%;
     }
-    @include mq("xsm") {
+    /*     @include mq("xsm") {
       width: 10%;
-    }
+    } */
     text-align: center;
   }
 
@@ -264,15 +323,15 @@
 }
 
 .title--4::after {
-  width: 16%;
+  /*   width: 16%; */
   text-align: center;
 }
 
 .title--4 {
-  /*   ::after {
-    width: 22%;
-    text-align: center;
-  } */
+
+  &::after {
+    padding-bottom: 4rem;
+  }
 
   &[ progressbar-deta = "p-progressbar4" ] {
     background-color: var(--color-primary);
@@ -305,5 +364,129 @@
     &::after {
       color: var(--color-primary);
     }
+  }
+}
+
+.progress-step1 {
+
+  &::after {
+    @include mq("md") {
+      width: 40px;
+      height: 40px;
+      margin-left: -14px;
+    }
+    @include mq("xsm") {
+      width: 30px;
+      height: 30px;
+      margin-left: -14px;
+    }
+    @include mq("sp") {
+      width: 30px;
+      height: 30px;
+      margin-left: -14px;
+    }
+    position: absolute;
+    bottom: 18%;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+    /* margin-right: 10px; */
+    content: "";
+    background: url(/images/image15.png) no-repeat;
+    background-size: contain;
+  }
+}
+
+.progress-step2 {
+
+  &::after {
+    @include mq("md") {
+      width: 40px;
+      height: 40px;
+      margin-left: -19px;
+    }
+    @include mq("xsm") {
+      width: 30px;
+      height: 30px;
+      margin-left: -14px;
+    }
+    @include mq("sp") {
+      width: 30px;
+      height: 30px;
+      margin-left: -14px;
+    }
+    position: absolute;
+    bottom: 18%;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+    /* margin-right: 10px; */
+    content: "";
+    background: url(/images/image16.png) no-repeat;
+    background-size: contain;
+  }
+}
+
+.progress-step3 {
+
+  &::after {
+    @include mq("md") {
+      width: 40px;
+      height: 40px;
+      margin-left: -20px;
+    }
+    @include mq("xsm") {
+      width: 30px;
+      height: 30px;
+      margin-left: -14px;
+    }
+    @include mq("sp") {
+      width: 30px;
+      height: 30px;
+      margin-left: -14px;
+    }
+    position: absolute;
+    bottom: 18%;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+    /* margin-right: 10px; */
+  
+    content: "";
+    background: url(/images/image17.png) no-repeat;
+    background-size: contain;
+  }
+}
+
+.progress-step4 {
+
+  &::after {
+    @include mq("md") {
+      width: 40px;
+      height: 40px;
+    }
+    @include mq("xsm") {
+      width: 30px;
+      height: 30px;
+    }
+    @include mq("sp") {
+      width: 30px;
+      height: 30px;
+      margin-left: -14px;
+    }
+    position: absolute;
+    bottom: 18%;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+    /* margin-right: 10px; */
+    margin-left: -8px;
+    content: "";
+    background: url(/images/image14.png) no-repeat;
+    background-size: contain;
   }
 }

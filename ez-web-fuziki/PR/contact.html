@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OSHIETE Catekyo</title>
+<link rel="stylesheet" href="/assets/css/common.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cabin&family=Montserrat&family=Open+Sans:wght@300&display=swap"
+  rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"> -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js'></script>
+<script src="/assets/js/nav.js"></script>
+<script src="/assets/js/header-footer.js"></script>
+<script>header();</script>
+
+<div class="wrap">
+  <main class="main">
+    <div class="main-content">
+      <section class="l-page-multi-purpose">
+        <h1>お問い合わせ</h1>
+        <form action="/" method="post">
+          <div class="p-checkbox">
+            <div class="labelArea">
+              <div class="label">ご希望の内容をチェックしてください</div>
+              <span class="required first">必須</span>
+            </div>
+
+            <div class="check-box--body">
+              <div class="check-box">
+                <input type="checkbox" id="c-01" name="checkbox">
+                <label for="c-01" class="checkbox">アプリについて</label>
+              </div>
+
+              <div class="check-box">
+                <input type="checkbox" id="c-02" name="checkbox">
+                <label for="c-02" class="checkbox">その他のお問い合わせ</label>
+              </div>
+
+              <div class="check-box">
+                <input type="checkbox" id="c-03" name="checkbox">
+                <label for="c-03" class="checkbox">メディア取材</label>
+              </div>
+            </div>
+          </div><!-- p-checkbox -->
+
+          <div class="form-group">
+            <label for="name">お名前<span class="required">必須</span></label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="入力してください" autofocus required>
+          </div>
+
+          <div class="form-group">
+            <label for="student">お問い合わせの種別<!--学年または対象--><span class="required">必須</span></label>
+            <div class="select-wrap--2">
+              <select id="student" name="student" class="form-control">
+                <option value='' disabled selected style='display:none;'>選択して下さい</option>
+                <option value="アプリについて">アプリについて</option>
+                <option value="メディア取材">メディア取材</option>
+                <option value="その他">その他</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="tel">電話番号</label>
+            <input type="text" id="tel" name="tel" class="form-control" placeholder="09012345678" autofocus required>
+          </div>
+
+          <div class="form-group">
+            <label for="contact">お問い合わせ内容<span class="required">必須</span></label>
+            <textarea name="contact" id="contact" class="form-control" placeholder="入力してください"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">送信する</button>
+      </section>
+    </div>
+  </form>
+
+  <div class="l-page-multi-purpose">
+    <div class="form-text">※このページは、SSL接続により通信が暗号化されています。<br>
+      ※個人情報は、プライバシーポリシーに基づき慎重に管理いたします。</div>
+    </div>
+    <!-- /.main-content -->
+  </main>
+</div>
+<!-- /.wrap -->
+
+<script>footer();</script>

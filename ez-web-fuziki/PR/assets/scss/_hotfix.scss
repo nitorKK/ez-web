@@ -1,0 +1,182 @@
+// 緊急・暫定の修正用（後で適切なところに移動して、このファイルの記述は削除すること）
+
+  // -------------------------------------
+  // 汎用（要素セレクタ）
+  // -------------------------------------
+  
+  img {
+    height: auto;
+  }
+  .alignleft {
+    text-align: left;
+  }
+  .aligncenter {
+    text-align: center;
+  }
+  .alignright {
+    text-align: right;
+  }
+  
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 2.8rem;
+    }
+    h2 {
+      font-size: 2.4rem;
+    }
+    h3 {
+      font-size: 2rem;
+    }
+    .main-content {
+      font-size: 1.4rem;
+    }
+  }
+  
+  @media screen and (min-width: 769px) {
+    h1 {
+      font-size: 4.2rem;
+    }
+    h2 {
+      font-size: 3.6rem;
+    }
+    h3 {
+      font-size: 2.2rem;
+    }
+    .main-content {
+      font-size: 1.6rem;
+    }
+  }
+  
+  // -------------------------------------
+  // google play 一旦表示だけ外し
+  // -------------------------------------
+  .appdl-googleplay {
+    display: none;
+  }
+  
+  // -------------------------------------
+  // WordPress から呼び出せる汎用クラス
+  // -------------------------------------
+  .link-btn {
+    text-align: center;
+    & > a {
+      display: inline-block;
+      text-align: center;
+      background: $color-main;
+      border: 1px solid $color-main;
+      border-radius: 32px;
+      padding: 16px 64px;
+      color: #fff;
+      font-weight: bold;
+      transition: .5s;
+      &:hover {
+        background: #fff;
+        color:$color-main;
+      }
+    }
+  }
+  
+  // -------------------------------------
+  // WordPress Gutenberg ブロックエディタに
+  // フロント側を揃える用
+  // -------------------------------------
+  figure.wp-block-image {
+    margin: 1rem 0;
+  }
+  
+  .block-editor-block-list__block {
+    margin-top: 28px;
+    margin-bottom: 28px;
+  }
+  
+  @media (min-width: 782px) {
+    .wp-block-columns {
+      flex-wrap: nowrap;
+    }
+  }
+  .wp-block-columns {
+    display: flex;
+    margin-bottom: 1.75em;
+    flex-wrap: wrap;
+  }
+  
+  @media (min-width: 782px) {
+    .editor-styles-wrapper .block-editor-block-list__block.wp-block-column:not(:first-child) {
+        margin-left: 32px;
+    }
+  }
+  .block-editor-block-list__block.wp-block-column.wp-block-column {
+      margin-top: 0;
+      margin-bottom: 0;
+  }
+  .wp-block-columns .wp-block {
+      max-width: none;
+      margin-left: 0;
+      margin-right: 0;
+  }
+  @media (min-width: 782px) {
+    .wp-block-column:not(:first-child) {
+        margin-left: 2em;
+    }
+  }
+    .block-editor-block-list__layout .wp-block {
+      margin-left: auto;
+      margin-right: auto;
+  }
+  .block-editor-block-list__layout .block-editor-block-list__block {
+      position: relative;
+      overflow-wrap: break-word;
+  }
+  .block-editor-block-list__layout .block-editor-block-list__block, .block-editor-block-list__layout .block-list-appender {
+      position: relative;
+  }
+  
+  .wp-block-columns .wp-block {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .block-editor-block-list__layout .wp-block {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .wp-block {
+    max-width: 580px;
+  }
+  
+  @media (min-width: 782px) {
+    .wp-block-column {
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+  }
+  .wp-block-column {
+      flex-grow: 1;
+      min-width: 0;
+      word-break: break-word;
+      overflow-wrap: break-word;
+  }
+  
+  h2.has-text-align-left,
+  h3.has-text-align-left,
+  h4.has-text-align-left,
+  h5.has-text-align-left,
+  h6.has-text-align-left {
+    text-align: left;
+  }
+  h2.has-text-align-center,
+  h3.has-text-align-center,
+  h4.has-text-align-center,
+  h5.has-text-align-center,
+  h6.has-text-align-center,
+  figure.wp-block-image {
+    text-align: center;
+  }
+  h2.has-text-align-right,
+  h3.has-text-align-right,
+  h4.has-text-align-right,
+  h5.has-text-align-right,
+  h6.has-text-align-right {
+    text-align: right;
+  }

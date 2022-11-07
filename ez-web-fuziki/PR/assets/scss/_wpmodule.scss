@@ -1,0 +1,29 @@
+// WordPress スタイル反映用 汎用クラス
+.has-text-align-left {
+  text-align: left;
+}
+.has-text-align-right {
+  text-align: right;
+}
+.has-small-font-size {
+  font-size: 1.3rem;
+  margin-bottom: 4px;
+}
+
+// for wordpress block editor (Gutenberg)
+body, .editor-styles-wrapper, h1, h2, h3, h4, p, th, td, a, span {
+  font-family: sans-serif;
+}
+
+.edit-post-visual-editor.editor-styles-wrapper {
+  font-size: 1.6rem;
+  font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+  color: $color-sub;
+  background-color: $color-bg;
+}
+

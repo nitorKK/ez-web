@@ -1,0 +1,26 @@
+// common.scss
+
+// 変数、mixin
+@import "include";
+
+// 初期化 normalize.css
+@import "normalize";
+
+// サイト全体にかかる基本設定など、基本的に html 要素をセレクタにする
+@import "base";
+
+// ページのレイアウトを定義
+@import "layout";
+
+// 各ページで共通のパーツなどを定義  ulリスト、dl説明リスト、table
+@import "module";
+
+// 個別ページのみに使われるようなものを定義
+@import "modifier";
+
+// HOME scss
+@import "home";
+
+// 緊急・暫定の修正用（後で適切なところに移動して、このファイルの記述は削除すること）
+//HOMEとnav部分の記述取り込み(module.scssに移動、layout.scssに移動）
+@import "hotfix";

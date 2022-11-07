@@ -1,0 +1,127 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: $color-bg;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-size: 1.5rem;
+  @include mq() {
+    font-size: 1.4rem;
+    }
+  font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+    color: $color-sub;   
+}
+
+main{
+  width: 100%;
+  overflow: hidden;
+}
+
+img{
+  max-width: 100%;
+}
+
+
+a{
+  text-decoration: none;
+  transition: .5s;
+  @include linkColor($color-main);
+}
+
+h1{
+  color:$color-sub;
+  text-align: center;
+  @include h1-space;
+}
+
+h2:first-of-type{
+  @include h2-space-first;
+}
+
+h2{
+  color:$color-main;
+  text-align: center;
+  @include h2-space;
+/*   font-family:$Cabin; */
+}
+
+h3{
+  text-align: center;
+  @include h3-space;
+}
+
+h4{
+  color:$color-main;
+  text-align: center;
+  @include h4-space;
+}
+
+p{
+  @include p-space;
+}
+
+ul{
+  padding:0 $width-sp-base-padding;
+  margin: auto;
+  margin-bottom:32px;
+  @include mq(pc) {
+    margin-bottom:56px;
+  }
+}
+
+li{
+  padding:0 0 $width-sp-base-padding;
+}
+
+//本文（太字）
+.text-bold{
+  font-weight: bold;
+}
+
+//本文（大）
+.large{
+  @include font-size(15);
+  @include mq(pc) {
+    @include font-size(16);
+    }
+}
+
+.big-text{
+  @include font-size(22);
+}
+
+//テキスト（green）
+.text-green {
+  color: $color-sub;
+}
+
+//テキスト（orange）
+.text-orange {
+  color: $color-main;
+}
+
+//改行用
+.span-block{
+  display:block;
+}
+.text-center{
+  text-align: center;
+}
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}

@@ -1,0 +1,193 @@
+// サイズ
+$size-base: 8px;
+
+$width-pc-max: 1280px;
+$width-pc-content-max: 1060px;
+$width-pc-base-padding: $size-base * 5;
+$width-sp-base-padding: $size-base * 3;
+
+// メインカラー
+$color-main: #ff5a1f;
+$color-sub: #005014;
+$color-bg: #fff6ec;
+$color-th-bg: #fae0c9;
+$color-accent: #fff700;
+$color-warning: #ce0000;
+
+$color-w: #fff;
+$color-b:#000;
+$color-form: #757779;
+//英字フォント
+$Cabin: "Cabin", sans-serif;
+
+//マーカー
+$marker:linear-gradient(transparent 60%, #fff700 60%);
+
+
+// mixin 
+//「tab」「xl」はレイアウト調整用
+$breakpoints: (
+  "sp": "screen and (max-width: 768px)",
+  "pc": "screen and (min-width: 769px)",
+  "tab": "screen and (min-width: 984px)",
+  "xl": "screen and (min-width: 1280px)",
+) !default;
+
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+$viewport: 768;
+// px値をvw値に変換する   margin-bottom: pxtovw(16);
+@function pxtovw($num, $width: $viewport) {
+  @return (1vw * $num / $width * 100);
+  }
+
+
+//フォントサイズ @include font-size(16);
+@mixin font-size($size: 24, $base: 16) {
+  font-size: $size + px;
+  font-size: ($size / ($base * 0.625)) + rem;
+}
+
+//リンクカラー　@include linkColor(#3cf);
+@mixin linkColor($color-main) {
+  color: $color-main;
+}
+
+//リンクカラー、ホバー　だしわけ　@include hover(hovercolor);
+@mixin hover($style){
+  //$styleがhoverdefaultだった時
+  @if $style == hoverdefault{
+    color: $color-w;
+  }
+
+  //$styleがhovercolorだった時　hover背景色がwhite
+  @else if $style == hovercolor{
+    &:hover{
+      background: $color-w;
+      color: $color-main;
+      transition: .3s;
+      border: 1px solid  $color-main;
+    }
+  }
+
+   //$styleがhovercolorOrangeだった時　hover背景色がorange
+  @else if $style == hovercolorOrange{
+    &:hover{
+      background: $color-main;
+      color:$color-w;
+      transition: .3s;
+    }
+  }
+
+    //$styleがhoverOpacityだった時　hoverがopacity
+     @else if $style == hoverOpacity{
+      &:hover{
+        transition: .3s;
+        opacity:.8;
+        color: $color-main;
+      }
+    }
+}
+
+
+//透明度 @include opacity(0.5);
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacityIE: $opacity * 100;
+  filter: alpha(opacity=$opacityIE);
+}
+
+//両端揃え @include justify();
+@mixin justify() {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+//paddingセット @include h1-space;
+@mixin h1-space {
+  margin: auto;
+  padding-top: 56px;
+  padding-bottom: 56px;
+  @include mq(pc) {
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
+}
+
+@mixin h2-space {
+  margin: auto;
+  padding-top: 32px;
+  margin-bottom: 32px;
+  @include mq(pc) {
+    margin-bottom: 56px;
+  }
+}
+
+@mixin h2-space-first {
+  margin-bottom: 32px;
+  padding-top: initial;
+  @include mq(pc) {
+    padding-top: 56px;
+  }
+}
+
+@mixin h3-space {
+  text-align: left;
+  margin: auto;
+  margin-bottom: 16px;
+  @include mq(pc) {
+    margin-bottom: 24px;
+  }
+}
+
+@mixin h4-space {
+  text-align: left;
+  margin: auto;
+  margin-bottom: 16px;
+}
+
+@mixin p-space {
+  margin: auto;
+  margin-bottom: 32px;
+  line-height: 2;
+  @include mq(pc) {
+    margin-bottom: 56px;
+  }
+}
+
+//要素の境界 @include border-radius(3);
+@mixin border-radius($radius) {
+  border-radius: $radius + px;
+}
+
+//プレースホルダー @include placeholder($color-form);
+@mixin placeholder($color) {
+  &::placeholder {
+    color: $color;
+  }
+
+  // Edge
+  &::-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+//横、縦セット @include aspect-ratio(); 初期値
+//            @include aspect-ratio(50px);　変更
+@mixin aspect-ratio($w-size:100%, $h-size:auto) {
+  display: block;
+  width: 100%;
+  max-width: $w-size;
+  height:$h-size;
+}
+
+
+//余白セット @include mp-set();
+@mixin mp-set($m-size, $p-size) {
+  margin: $m-size;
+  padding:$p-size;
+}
